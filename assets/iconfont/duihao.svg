@@ -1,0 +1,23 @@
+<svg id="组_88" data-name="组 88" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #3488f8;
+      }
+
+      .cls-2 {
+        fill: #3488f8;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="圆角矩形_644" data-name="圆角矩形 644" class="cls-1" x="1" y="1" width="30" height="30" rx="14.5" ry="14.5"/>
+  <path id="圆角矩形_645_拷贝" data-name="圆角矩形 645 拷贝" class="cls-2" d="M741.925,625.582l9.76-10.351a0.737,0.737,0,0,1,1.084,0,0.849,0.849,0,0,1,0,1.151l-9.76,10.35a0.735,0.735,0,0,1-1.084,0A0.847,0.847,0,0,1,741.925,625.582Zm-5.715-6.06a0.736,0.736,0,0,1,1.085,0l5.714,6.06a0.847,0.847,0,0,1,0,1.15,0.735,0.735,0,0,1-1.084,0l-5.715-6.06A0.849,0.849,0,0,1,736.21,619.522Z" transform="translate(-728 -605)"/>
+</svg>

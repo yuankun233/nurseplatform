@@ -1,0 +1,144 @@
+/* pages/sfrz/sfrz.wxss */
+.nav {
+  position: fixed;
+  padding-top: 50rpx;
+  z-index: 99;
+  top: 0;
+  width: 100%;
+  height: 128rpx;
+  background-color: #4178f0;
+  .back {
+    position: absolute;
+    top: 63rpx;
+    left: 13rpx;
+    width: 20rpx;
+    height: 35rpx;
+  }
+  text-align: center;
+  .title {
+    font-size: 40rpx;
+    font-family: PingFang SC;
+    color: #ffffff;
+  }
+}
+page {
+  padding-top: 128rpx;
+  padding-bottom: 223rpx;
+}
+// 步骤条
+.steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 34rpx;
+  font-size: 28rpx;
+  font-family: PingFang;
+  font-weight: 400;
+  color: #e6e6e6;
+}
+// 身份证照片
+.idupload {
+  .tit {
+    margin: 0 0 36rpx 31rpx;
+    font-size: 28rpx;
+    font-family: PingFang;
+    font-weight: 400;
+    color: #333333;
+  }
+  .scanid {
+    padding: 0 45rpx;
+    display: flex;
+    justify-content: space-between;
+  }
+  .idcard {
+    width: 301rpx;
+    height: 261rpx;
+  }
+}
+// 注意事项
+.warn {
+  margin-top: 42rpx;
+  padding: 0 30rpx;
+  .tit {
+    margin-bottom: 47rpx;
+    font-size: 24rpx;
+    font-family: SourceHanSansCN;
+    font-weight: 400;
+    color: #4178f0;
+    image {
+      margin-right: 13rpx;
+      vertical-align: middle;
+      width: 26rpx;
+      height: 26rpx;
+    }
+  }
+  .items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .pic {
+        width: 143rpx;
+        height: 93rpx;
+        margin-bottom: 20rpx;
+      }
+      .text {
+        display: flex;
+        align-items: center;
+        .icon {
+          width: 19rpx;
+          height: 19rpx;
+        }
+        .text {
+          margin-left: 8rpx;
+          font-size: 24rpx;
+          font-family: SourceHanSansCN;
+          font-weight: 400;
+          color: #626262;
+        }
+      }
+    }
+  }
+}
+// 上传手持身份证
+.uploadid {
+  margin-top: 50rpx;
+  margin-left: 74rpx;
+  width: 600rpx;
+  height: 468rpx;
+}
+// 提示信息
+.message {
+  margin-top: 55rpx;
+  padding: 0 147rpx 0 29rpx;
+  .tit {
+    font-size: 28rpx;
+    font-family: PingFang;
+    color: #333333;
+    margin-bottom: 30rpx;
+  }
+  .text {
+    font-size: 20rpx;
+    font-family: PingFang;
+    color: #999999;
+  }
+}
+// 底部按钮
+.nextbtn {
+  position: fixed;
+  left: 104rpx;
+  bottom: 60rpx;
+  width: 543rpx;
+  height: 88rpx;
+  background: #4178f0;
+  border-radius: 44rpx;
+
+  font-size: 36rpx;
+  font-family: PingFangSC;
+  font-weight: 400;
+  color: #ffffff;
+}

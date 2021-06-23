@@ -1,0 +1,115 @@
+/* pages/order/order.wxss */
+// tab栏
+.weui-tabs-bar__item {
+  width: 33.33%;
+  text-align: center;
+}
+.weui-tabs-bar__title {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  padding-bottom: 14rpx;
+}
+
+.title {
+  text-align: center;
+  background-color: #fff;
+  padding: 63rpx 0 43rpx 0;
+  font-size: 38rpx;
+  font-family: PingFang SC;
+  font-weight: 800;
+  color: #000000;
+}
+// 列表
+view.item {
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+
+  view.row-a1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    view.name {
+      font-size: 30rpx;
+      font-family: PingFang SC;
+      font-weight: bold;
+      color: #282f3a;
+    }
+
+    view.status {
+      font-size: 20rpx;
+      font-family: PingFang SC;
+      color: #666666;
+    }
+  }
+
+  view.row-a2 {
+    font-size: 20rpx;
+    font-family: PingFang SC;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    view.serve {
+    }
+
+    view.hcb {
+      margin-left: 65rpx;
+    }
+  }
+  // 图标
+  .icon {
+    width: 22rpx;
+    height: 22rpx;
+    margin-right: 8rpx;
+  }
+
+  view.row-a3 {
+    font-size: 20rpx;
+    view.text {
+      margin-top: 15rpx;
+      display: flex;
+      align-items: center;
+
+      img.time {
+      }
+
+      text {
+      }
+      .light {
+        color: #ff5543;
+      }
+    }
+  }
+  .btns {
+    .calluser {
+      position: absolute;
+      bottom: 91rpx;
+      right: 30rpx;
+      padding: unset;
+      width: 140rpx;
+      height: 46rpx;
+      background: #ffffff;
+      border: unset !important;
+      border: 1rpx solid #b5b5b5;
+      border-radius: 10rpx;
+      line-height: 46rpx !important;
+      font-size: 23rpx;
+      font-family: PingFang SC;
+      color: #888888;
+    }
+    .go {
+      position: absolute;
+      bottom: 18rpx;
+      right: 30rpx;
+      padding: unset;
+      width: 140rpx;
+      height: 46rpx;
+      background: #3488f8;
+      border-radius: 10rpx;
+      font-size: 23rpx;
+      font-family: PingFang SC;
+      line-height: 46rpx;
+      color: #ffffff;
+    }
+  }
+}

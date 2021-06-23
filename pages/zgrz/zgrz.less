@@ -1,0 +1,84 @@
+/* pages/zgrz/zgrz.wxss */
+.nav {
+  position: fixed;
+  padding-top: 50rpx;
+  top: 0;
+  width: 100%;
+  height: 128rpx;
+  background-color: #4178f0;
+  .back {
+    position: absolute;
+    top: 63rpx;
+    left: 13rpx; 
+    width: 20rpx;
+    height: 35rpx;
+  }
+  text-align: center;
+  .title {
+    font-size: 40rpx;
+    font-family: PingFang SC;
+    color: #ffffff;
+  }
+}
+page {
+  padding-top: 128rpx;
+}
+// 步骤条
+.steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center ;
+  padding: 0 34rpx;
+  font-size: 28rpx;
+  font-family: PingFang;
+  font-weight: 400;
+  color: #e6e6e6;
+}
+// 表单
+.cu-form-group {
+  background-color: unset;
+  .title {
+    font-size: 34rpx;
+    font-family: PingFang;
+    font-weight: normal;
+    color: #333333;
+  }
+  input {
+    ::placeholder {
+      font-size: 34rpx;
+      font-family: PingFang;
+      font-weight: 400;
+      color: #cccccc;
+    }
+  }
+}
+view.sex {
+  position: relative;
+  .sexradio {
+    position: absolute;
+    left: 237rpx;
+  }
+  span {
+    margin-left: 33rpx;
+    vertical-align: middle;
+    font-size: 34rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #333333;
+  }
+}
+// 底部按钮
+.nextbtn {
+  position: absolute;
+  left: 104rpx;
+  bottom: 60rpx;
+  width: 543rpx;
+  height: 88rpx;
+  background: #4178f0;
+  border-radius: 44rpx;
+
+  font-size: 36rpx;
+  font-family: PingFangSC;
+  font-weight: 400;
+  color: #ffffff;
+}

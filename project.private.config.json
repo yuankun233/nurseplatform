@@ -1,0 +1,54 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "订单",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单详情页",
+          "pathName": "pages/orderdetail/orderdetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "待结算",
+          "pathName": "pages/waitclose/waitclose",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "资格认证",
+          "pathName": "pages/zgrz/zgrz",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "身份认证",
+          "pathName": "pages/sfrz/sfrz",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

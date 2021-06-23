@@ -1,0 +1,184 @@
+<!--pages/zgrz/zgrz.wxml-->
+<view class="nav">
+  <image
+    class="back"
+    src="../../assets/back.png"
+    mode="widthFix"
+    lazy-load="false"
+    bind:tap="goback"
+  />
+  <span class="title">资格认证</span>
+</view>
+<!-- 步骤条 -->
+<view class="steps">
+  <span>基本信息</span>
+  <span style="font-size:40rpx">﹥</span>
+  <span style="color:#4178F0">身份认证</span>
+  <span style="font-size:40rpx">﹥</span>
+  <span>岗位认证</span>
+</view>
+<!-- 身份证上传 -->
+<view class="idupload">
+  <view class="tit">
+    请扫描身份证
+  </view>
+  <view class="scanid">
+    <image
+      class="idcard"
+      src="../../assets/idcard1.png"
+      mode="widthFix"
+      lazy-load="false"
+      binderror=""
+      bindload=""
+    />
+    <image
+      class="idcard"
+      src="../../assets/idcard2.png"
+      mode="widthFix"
+      lazy-load="false"
+      binderror=""
+      bindload=""
+    />
+
+  </view>
+</view>
+<!-- 注意事项 -->
+<view class="warn">
+  <view class="tit">
+    <image
+      class=""
+      src="../../assets/warn.png"
+      mode="aspectFit|aspectFill|widthFix"
+      lazy-load="false"
+      binderror=""
+      bindload=""
+    />
+    注意事项
+  </view>
+  <view class="items">
+    <view class="item">
+      <image
+        class="pic"
+        src="../../assets/standard1.png"
+        mode="aspectFit|aspectFill|widthFix"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+      <view class="text">
+        <image
+          class="icon"
+          src="../../assets/duidui.png"
+          style="width:26rpx;height:18rpx"
+          mode="aspectFit|aspectFill|widthFix"
+          lazy-load="false"
+          binderror=""
+          bindload=""
+        />
+        <view class="text">
+          标准
+        </view>
+
+      </view>
+    </view>
+    <view class="item">
+      <image
+        class="pic"
+        src="../../assets/standard2.png"
+        mode="aspectFit|aspectFill|widthFix"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+      <view class="text">
+        <image
+          class="icon"
+          src="../../assets/cuocuo.png"
+          mode="aspectFit|aspectFill|widthFix"
+          lazy-load="false"
+          binderror=""
+          bindload=""
+        />
+        <view class="text">
+          边框缺失
+        </view>
+
+      </view>
+    </view>
+    <view class="item">
+      <image
+        class="pic"
+        src="../../assets/standard3.png"
+        mode="aspectFit|aspectFill|widthFix"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+      <view class="text">
+        <image
+          class="icon"
+          src="../../assets/cuocuo.png"
+          mode="aspectFit|aspectFill|widthFix"
+          lazy-load="false"
+          binderror=""
+          bindload=""
+        />
+        <view class="text">
+          照片模糊
+        </view>
+
+      </view>
+    </view>
+    <view class="item">
+      <image
+        class="pic"
+        src="../../assets/standard1.png"
+        mode="aspectFit|aspectFill|widthFix"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+      <view class="text">
+        <image
+          class="icon"
+          src="../../assets/cuocuo.png"
+          mode="aspectFit|aspectFill|widthFix"
+          lazy-load="false"
+          binderror=""
+          bindload=""
+        />
+        <view class="text">
+          闪光强烈
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+</view>
+<!-- 提示信息 -->
+<view class="message">
+  <view class="tit">
+    请上传手持身份证照
+  </view>
+  <view class="text">
+    1.请手持身份证拍照；
+  </view>
+  <view class="text"> 2.请确保照片的内容完整并清晰可见，仅支持jpg、png格式，图 片大小小于5M； </view>
+  <view class="text">3.请上传彩色图像</view>
+</view>
+<!-- 上传手持身份证 -->
+<image
+  class="uploadid"
+  src="../../assets/uploadid.png"
+  mode="aspectFit|aspectFill|widthFix"
+  lazy-load="false"
+  binderror=""
+  bindload=""
+/>
+
+<!-- 下一步 -->
+<button class="nextbtn" bind:tap="next">
+  下一步
+</button>
+

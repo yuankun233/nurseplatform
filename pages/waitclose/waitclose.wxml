@@ -1,0 +1,219 @@
+<!--pages/waitclose/waitclose.wxml-->
+
+<image
+  class="banner"
+  src="../../assets/daijiesuan.png"
+  mode="widthFix"
+  lazy-load="false"
+/>
+<image
+  class="back"
+  src="../../assets/back.png"
+  mode="widthFix"
+  lazy-load="false"
+  bind:tap="goback"
+/>
+<view class="title">
+  待结算
+</view>
+<!-- 顶部区域 -->
+<view class="top">
+  <view class="row-a1">
+    <view class="left">
+      <view class="able">
+        可结算金额
+        (元)
+      </view>
+      <view class="price">
+        89563.3
+      </view>
+
+    </view>
+    <view class="right">
+      <button size="mini">全部结算</button>
+    </view>
+  </view>
+  <view class="row-a2">
+    <view class="r1">
+      <view class="order">
+        订单数量
+      </view>
+      <view class="num">
+        369
+      </view>
+    </view>
+    <view class="r1">
+      <view class="order">
+        昨日新单
+      </view>
+      <view class="num">
+        +7
+      </view>
+    </view>
+    <view class="r1">
+      <view class="order">
+        昨日收益(元)
+      </view>
+      <view class="num">
+        +352.2
+      </view>
+    </view>
+  </view>
+  <view class="indicator">
+    <image
+      class="icon"
+      src="../../assets/promote.png"
+      mode="widthFix"
+    />
+    <view class="text">
+      <view>
+        本月接单
+      </view>
+      <view class="text2">
+        已经超过
+        <view class="persent">
+          89%
+        </view>
+        同业人员
+      </view>
+
+    </view>
+    <view class="goorder">
+      去接单>
+    </view>
+  </view>
+</view>
+
+<!-- 信息统计 -->
+<view class="message">
+  <image
+    class="pic2"
+    src="../../assets/totalprice.png"
+    mode="widthFix"
+    lazy-load="false"
+    binderror=""
+    bindload=""
+  />
+  <image
+    class="pic1"
+    src="../../assets/totalorder.png"
+    mode="widthFix"
+    lazy-load="false"
+    binderror=""
+    bindload=""
+  />
+  <view class="flexbox">
+    <view class="item">
+      <image
+        class="icon"
+        src="../../assets/totalordericon.png"
+        mode="widthFix"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+
+      <view class="text">
+        <view class="tit">
+          总订单
+        </view>
+        <view class="num">
+          6932
+        </view>
+        <view class="time">
+          2021.04.06 至今
+        </view>
+      </view>
+
+    </view>
+    <view class="item">
+      <image
+        class="icon"
+        src="../../assets/totalpriceicon.png"
+        mode="widthFix"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+
+      <view class="text">
+        <view class="tit">
+          总订单
+        </view>
+        <view class="num">
+          6932
+        </view>
+        <view class="time">
+          2021.04.06 至今
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<!-- 订单列表 -->
+<view class="orderlist">
+  <view
+    class="item"
+    wx:for="{{items}}"
+    wx:key="item0"
+    wx:for-item="item0"
+    wx:for-index="index0"
+  >
+    <view class="date">
+      2021年6月16日
+    </view>
+    <view
+      class="checkboxlist"
+      wx:for="{{item0.orderlist}}"
+      wx:for-index="index"
+      wx:key="*this"
+    >
+      <!-- 复选框 -->
+      <view class="flexbox">
+        <view
+          data-index="{{index}}"
+          data-index0="{{index0}}"
+          class="checkbox {{item.checked?'checkedActive':''}}"
+          bindtap='userCheck'
+        >
+          <image
+            wx:if="{{item.checked}}"
+            class="checkicon"
+            src="../../assets/check2.png"
+            mode="widthFix"
+          />
+
+        </view>
+        <view class="text">
+          <view class="tit">
+            {{item.title}}
+          </view>
+          <view class="order">
+            订单号：{{item.order}}
+          </view>
+        </view>
+      </view>
+
+      <view class="price">
+        <span style=" font-size: 36rpx">+</span>
+        {{item.price}}
+        <span style=" font-size: 18rpx">元</span>
+
+      </view>
+    </view>
+
+  </view>
+</view>
+<!-- 全选按钮 -->
+<view class="checkbtns">
+
+  <button class="allcheck" bind:tap="allcheck">
+    全选(勾选)
+  </button>
+  <button class="allclose">
+    全部结算
+  </button>
+</view>
+

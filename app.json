@@ -1,0 +1,49 @@
+{
+  "usingComponents": {
+    "van-button": "/miniprogram_npm/vant-weapp/button/index",
+    "van-overlay": "/miniprogram_npm/vant-weapp/overlay/index",
+    "van-tabs": "/miniprogram_npm/vant-weapp/tabs/index"
+  },
+  "pages": [
+    "pages/home/home",
+    "pages/order/order",
+    "pages/my/my",
+    "pages/orderdetail/orderdetail",
+    "pages/waitclose/waitclose",
+    "pages/zgrz/zgrz",
+    "pages/sfrz/sfrz" 
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationStyle":"custom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#8D8D8D",
+    "selectedColor": "#000000",
+    "backgroundColor": "#fff", 
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./assets/home.png",
+        "selectedIconPath": "./assets/home-active.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "./assets/order.png",
+        "selectedIconPath": "./assets/order-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./assets/my.png",
+        "selectedIconPath": "./assets/my-active.png"
+      }
+    ]
+  }
+}

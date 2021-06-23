@@ -1,0 +1,212 @@
+/* pages/my/my.wxss */
+.banner {
+  position: fixed;
+  z-index: -99;
+  top: 0;
+  width: 100%;
+  height: 358rpx;
+}
+view.top {
+  text-align: center;
+}
+view.top view.title {
+  margin-top: 60rpx;
+  font-size: 38rpx;
+  font-family: PingFang SC;
+  color: #ffffff;
+}
+view.top .headpic {
+  box-sizing: content-box;
+  border: solid 5rpx rgba(255, 255, 255, 0.3);
+  margin: 33rpx auto 20rpx;
+  width: 135rpx;
+  height: 135rpx;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+view.top view.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  font-family: PingFang;
+  color: #ffffff;
+}
+view.top view.profile view.id {
+  margin-left: 20rpx;
+  font-size: 22rpx;
+}
+view.top .verifyed {
+  margin: 10rpx auto 0;
+  width: 80rpx;
+  height: 29rpx;
+  background: #1cd767;
+  line-height: 29rpx;
+  font-size: 20rpx;
+  font-family: PingFang;
+  font-weight: 400;
+  color: #ffffff;
+  border-radius: 15rpx;
+}
+.verify {
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+  margin-left: 20rpx;
+  margin-top: 16rpx;
+  margin-bottom: 26rpx;
+  width: 710rpx;
+  height: 106rpx;
+  font-size: 30rpx;
+  font-family: Adobe Heiti Std;
+  font-weight: normal;
+  color: #3488f8;
+  line-height: 106rpx;
+}
+.verify .verifybanner {
+  width: 710rpx;
+  height: 106rpx;
+  position: absolute;
+  top: 0;
+  z-index: -99;
+}
+.verify .left {
+  padding-left: 20rpx;
+}
+.verify .right {
+  padding-right: 32rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #3488f8;
+  line-height: 106rpx;
+}
+.verify .right .duihao {
+  margin-bottom: 6rpx;
+  vertical-align: middle;
+  width: 30rpx;
+  height: 30rpx;
+}
+view.cash {
+  position: relative;
+  margin-left: 20rpx;
+  width: 710rpx;
+  height: 311rpx;
+  padding: 0 31rpx 0 20rpx;
+}
+view.cash .cashbanner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -99;
+  width: 710rpx;
+  height: 311rpx;
+}
+view.cash view.row-a1 {
+  padding-top: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+view.cash view.row-a1 .ablecash {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  font-family: Adobe Heiti Std;
+  font-weight: normal;
+  color: #ffffff;
+}
+view.cash view.row-a1 .ablecash view.ligh {
+  font-size: 46rpx;
+}
+view.cash view.row-a1 view.cashbtn button {
+  padding: unset;
+  width: 160rpx;
+  height: 54rpx;
+  border: 1rpx solid rgba(255, 255, 255, 0.7);
+  background: unset;
+  border-radius: 27rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 54rpx;
+}
+view.cash view.row-a2 {
+  position: relative;
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+view.cash view.row-a2 .line {
+  position: absolute;
+  left: 50%;
+  top: 20rpx;
+  width: 1rpx;
+  height: 82rpx;
+  background: #ffffff;
+}
+view.cash view.row-a2 .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+view.cash view.row-a2 .title {
+  font-size: 26rpx;
+  font-family: PingFang;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 54rpx;
+}
+view.cash view.row-a2 .total {
+  font-size: 44rpx;
+  font-family: DIN;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 54rpx;
+}
+view.cash view.row-a3 {
+  margin-top: 20rpx;
+  font-size: 20rpx;
+  font-family: Source Han Sans CN;
+  color: #ffffff;
+}
+.btns .item {
+  margin-bottom: 1rpx;
+}
+.btns .item:nth-child(1) {
+  margin-bottom: unset;
+}
+.btns .item {
+  padding: 0 28rpx 0 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 86rpx;
+  background: #fff;
+}
+.btns .item .flexbox {
+  display: flex;
+  align-items: center;
+}
+.btns .item .text {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  line-height: 86rpx;
+}
+.btns .item .go {
+  width: 12rpx;
+  height: 22rpx;
+}
+.btns .item .pic {
+  margin-right: 14rpx;
+  width: 35rpx;
+  height: 35rpx;
+}
+.btns .item:nth-child(1) {
+  margin-top: 25rpx;
+  margin-bottom: 16rpx;
+}

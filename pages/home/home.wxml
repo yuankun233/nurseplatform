@@ -1,0 +1,117 @@
+<!--pages/home/home.wxml-->
+<text class="realtit">首页</text>
+<!-- 顶部导航 -->
+<view class="header" style="padding-top:{{statusBarHeight}}px">
+  <!-- 背景图 -->
+  <image
+    class="banner"
+    src="../../assets/banner.png"
+    mode="widthFix"
+    lazy-load="false"
+    binderror=""
+    bindload=""
+  />
+  <view class="top">
+    <text class="tit" style="opacity:0">首页</text>
+    <view class="nav">
+      <!-- 搜索框 -->
+      <view class="input">
+        <button
+          class="searchbtn"
+          size="mini"
+          type="default"
+        >快速搜索
+        </button>
+        <image
+          class="search"
+          src="../../assets/search.png"
+          mode="widthFix"
+        />
+
+      </view>
+      <!-- 服务时间 -->
+      <view class="servetime">
+        选择服务时间
+        <image
+          class="rili"
+          src="../../assets/rili.png"
+          mode="widthFix"
+        />
+      </view>
+
+    </view>
+  </view>
+
+  <!-- 导航 -->
+</view>
+<!--  服务列表 -->
+<view style="padding" class="list">
+  <view class="item" wx:for="{{9}}">
+    <view class="left">
+      <view class="name">
+        张先生
+      </view>
+      <view class="detail">
+        静脉采血(单次)
+        <text class="hcb">需要耗材包</text>
+      </view>
+      <view class="text0" style="margin-bottom:16rpx">
+        <image
+          class="icon"
+          src="../../assets/time.png"
+          mode="aspectFit|aspectFill|widthFix"
+          lazy-load="false"
+          binderror=""
+          bindload=""
+        />
+        服务时间：
+        <text class="text1">6-11</text>
+        13:00-16:00
+      </view>
+      <view class="text0" style="margin-bottom:16rpx">
+        <image
+          class="icon"
+          src="../../assets/msg.png"
+          mode="aspectFit|aspectFill|widthFix"
+          lazy-load="false"
+          binderror=""
+          bindload=""
+        />
+        情况描述：
+        <text class="text1">需要带压脉带以及酒精棉</text>
+
+      </view>
+      <view class="text0">
+        <image
+          class="icon"
+          src="../../assets/address.png"
+          style="height:30rpx;width:23rpx"
+          mode="aspectFit|aspectFill|widthFix"
+          lazy-load="false"
+          binderror=""
+          bindload=""
+        />
+        地址：
+        <text class="text1">上海闵行区</text>
+
+      </view>
+
+    </view>
+    <view class="right">
+      <view class="price">
+        <text class="light">￥</text>
+        150
+      </view>
+      <button
+        class="gobtn"
+        size='mini'
+        type="default"
+      >
+        立即抢单
+      </button>
+    </view>
+
+  </view>
+
+</view>
+
