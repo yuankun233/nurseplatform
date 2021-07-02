@@ -130,7 +130,7 @@
     </order-message>
   </van-tab>
   <van-tab title="已服务">
-
+    <order-list></order-list>
   </van-tab>
 
 </van-tabs>

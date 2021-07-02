@@ -6,9 +6,9 @@
 >
   <view class="row-a1">
     <view class="name">{{item.name}}</view>
-    <view class="status">
+    <!-- <view class="status">
       待服务
-    </view>
+    </view> -->
   </view>
   <view class="row-a2">
     <view class="serve">
@@ -64,7 +64,7 @@
       />
       地址：{{item.adress}}
     </view>
-    <view class="text">
+    <!-- <view class="text">
       <image
         class="money icon"
         src="../../assets/money.png"
@@ -83,15 +83,21 @@
         150
       </view>
       元
-    </view>
+    </view> -->
 
   </view>
-  <view class="btns">
+  <!-- <view class="btns">
     <view class="flexbox">
-      <btns></btns>
+
     </view>
 
-  </view>
+  </view> -->
+  <image
+    class="served"
+    src="../../assets/served.png"
+    mode="widthFix"
+  >
 
+  </image>
 </view>
 

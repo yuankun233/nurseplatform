@@ -55,3 +55,10 @@
   right: 30rpx;
   top: 129rpx;
 }
+.item .served {
+  position: absolute;
+  top: 64rpx;
+  right: 37rpx;
+  width: 168rpx;
+  height: 126rpx;
+}
