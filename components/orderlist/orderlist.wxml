@@ -1,0 +1,97 @@
+<!--components/orderlist/orderlist.wxml-->
+<view
+  class="item"
+  wx:for="{{tabs}}"
+  catch:tap="goOrderDetail"
+>
+  <view class="row-a1">
+    <view class="name">{{item.name}}</view>
+    <view class="status">
+      待服务
+    </view>
+  </view>
+  <view class="row-a2">
+    <view class="serve">
+      {{item.type}}</view>
+    <view class="hcb">
+      {{item.hcb==true?'需要耗材包':'不需要耗材包'}}
+    </view>
+  </view>
+  <view class="row-a3">
+    <view class="text">
+      <image
+        class="time icon"
+        src="../../assets/time.png"
+        mode="aspectFit|aspectFill|widthFix"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+      服务时间：
+      <view
+        class=""
+        selectable="false"
+        space="false"
+        decode="false"
+        style="margin-right:10rpx"
+      >
+        {{item.servedate}}
+      </view>
+      {{item.servetime}}
+    </view>
+    <view class="text">
+      <image
+        class="msg icon"
+        src="../../assets/msg.png"
+        mode="aspectFit|aspectFill|widthFix"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+      情况描述：
+      {{item.msg}}
+
+    </view>
+    <view class="text">
+      <image
+        class="address icon"
+        src="../../assets/address.png"
+        style="width:23rpx;height:29rpx"
+        mode="aspectFit|aspectFill|widthFix"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+      地址：{{item.adress}}
+    </view>
+    <view class="text">
+      <image
+        class="money icon"
+        src="../../assets/money.png"
+        mode="aspectFit|aspectFill|widthFix"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+      此单可赚
+      <view
+        class="light"
+        selectable="false"
+        space="false"
+        decode="false"
+      >
+        150
+      </view>
+      元
+    </view>
+
+  </view>
+  <view class="btns">
+    <view class="flexbox">
+      <btns></btns>
+    </view>
+
+  </view>
+
+</view>
+

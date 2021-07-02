@@ -15,7 +15,7 @@
     <text class="tit" style="opacity:0">首页</text>
     <view class="nav">
       <!-- 搜索框 -->
-      <view class="input">
+      <view class="input" catch:tap="goSearch">
         <button
           class="searchbtn"
           size="mini"
@@ -102,16 +102,43 @@
         <text class="light">￥</text>
         150
       </view>
-      <button
+      <van-button
         class="gobtn"
-        size='mini'
-        type="default"
+        bindtap="showModal"
+        data-target="Image"
       >
         立即抢单
-      </button>
+      </van-button>
     </view>
 
   </view>
 
+</view>
+<!-- 抢单成功遮罩层 -->
+
+<view class="cu-modal {{modalName=='Image'?'show':''}}">
+  <view class="cu-dialog getsucessbox">
+    <image
+      class="sucesspic"
+      src="../../assets/getsucess.png"
+      mode="aspectFit|aspectFill|widthFix"
+      lazy-load="true"
+      binderror=""
+      bindload=""
+    />
+    <view class="getsucessconte">
+      <view class="text">
+        恭喜您，抢单成功！
+      </view>
+      <van-button class="orderdetailBtn" bind:tap="goOrderDetail">查看订单</van-button>
+      <view
+        class="back"
+        bind:tap="hideModal"
+        data-target="Image"
+      >
+        返回首页
+      </view>
+    </view>
+  </view>
 </view>
 

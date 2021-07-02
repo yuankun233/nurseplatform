@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "home-header": "../../components/homeheader/homeheader",
+    "search-content": "../../components/searchcontent/searchcontent"
+  }
+}

@@ -6,29 +6,18 @@
   订单
 </view>
 <!-- tab栏 -->
-<mp-tabs
-  tabs="{{tabs}}"
-  tab-underline-color="#3488F8"
-  tab-active-text-color="#3488F8"
->
-  <block
-    wx:for="{{tabs3}}"
-    wx:key="item0"
-    wx:for-item="item0"
-  >
-
+<van-tabs swipeable>
+  <van-tab title="待服务">
+    <!--components/orderlist/orderlist.wxml-->
     <view
-      class="item tab-content"
-      data-set="{{item0.list}}"
-      slot="tab-content-{{index}}"
-      wx:for="{{item0.list}}"
-      bind:tap="goorderdetail"
+      class="item"
+      wx:for="{{tabs}}"
+      catch:tap="goOrderDetail"
     >
-
       <view class="row-a1">
         <view class="name">{{item.name}}</view>
         <view class="status">
-          {{item.status==false?'待服务':"已服务"}}
+          待服务
         </view>
       </view>
       <view class="row-a2">
@@ -109,18 +98,40 @@
       </view>
       <view class="btns">
         <view class="flexbox">
-          <button class="calluser" size="mini">
+          <van-button class="calluser" catch:tap="calluser">
             联系客户
-          </button>
-          <button class="go" size="mini">
+          </van-button>
+          <van-button
+            class="go"
+            catch:tap="go"
+            wx:if="{{btnStatus===0}}"
+          >
             出发
-          </button>
+          </van-button>
+          <van-button
+            class="go"
+            catch:tap="goOrderDetail"
+            wx:if="{{btnStatus===1}}"
+          >
+            到达
+          </van-button>
+
         </view>
 
       </view>
 
     </view>
-  </block>
 
-</mp-tabs>
+  </van-tab>
+  <!-- 服务中 -->
+  <van-tab title="服务中">
+    <order-message class="order-message">
+      <van-button type="default" class="recordBtn">打开录音</van-button>
+    </order-message>
+  </van-tab>
+  <van-tab title="已服务">
+
+  </van-tab>
+
+</van-tabs>
 

@@ -1,0 +1,77 @@
+/* components/ordermessage/ordermessage.wxss */
+.order {
+  height: 80vh;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 0 30rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  color: #000000;
+}
+.order .name {
+  margin-top: 56rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  color: #282f3a;
+}
+.order view.personmsg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order view.personmsg view.sex {
+  display: flex;
+  align-items: center;
+}
+.order view.personmsg view.age {
+  margin-left: 145rpx;
+}
+.order view.personmsg view.price {
+  display: flex;
+  align-items: center;
+  font-size: 52rpx;
+  font-family: DIN;
+  font-weight: bold;
+  color: #ff5543;
+}
+.order view.personmsg view.price view.light {
+  margin-top: 13rpx;
+  font-size: 32rpx;
+}
+.order view.ordernum {
+  margin-bottom: 34rpx;
+}
+.order view.type {
+  margin-bottom: 16rpx;
+}
+.order view.starttime {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+.order view.starttime view.date {
+  margin: 0 20rpx;
+}
+.order view.servetime {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+.order view.servetime view.date {
+  margin: 0 20rpx;
+}
+.order view.address {
+  margin-bottom: 53rpx;
+}
+.order view.input view.dsc {
+  margin-bottom: 18rpx;
+}
+.order view.input textarea {
+  width: 690rpx;
+  height: 221rpx;
+  background: #ffffff;
+  border: 1rpx solid #b5b5b5;
+  border-radius: 10rpx;
+  padding-left: 30rpx;
+  padding-top: 20rpx;
+}

@@ -1,0 +1,31 @@
+/* components/orderlist/btns/btns.wxss */
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+.flex .van-button {
+  width: 140rpx !important;
+  height: 46rpx !important;
+  border-radius: 10rpx !important;
+}
+.flex .van-button .van-button__text {
+  line-height: 46rpx !important;
+  font-size: 23rpx !important;
+  font-family: PingFang SC !important;
+}
+.flex .calluser {
+  margin-bottom: 18rpx;
+}
+.flex .calluser .van-button {
+  background: #ffffff !important;
+  border: 1rpx solid #b5b5b5 !important;
+}
+.flex .calluser .van-button .van-button__text {
+  color: #888888 !important;
+}
+.flex .go .van-button {
+  background: #3488f8 !important;
+}
+.flex .go .van-button .van-button__text {
+  color: #fff !important;
+}

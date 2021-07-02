@@ -45,11 +45,9 @@ page::after {
   z-index: 99;
 }
 .nav {
-  margin-bottom: 36rpx;
-  padding: 0 30rpx;
-  margin-top: 47rpx;
-  text-align: center;
-
+  position: fixed;
+  top: 160rpx;
+  left: 30rpx;
   .input {
     position: relative;
 
@@ -79,7 +77,7 @@ page::after {
     padding-left: 20rpx;
     position: relative;
     left: 444rpx;
-    width: 260rpx;
+    width: 248rpx;
     height: 58rpx;
     background: #ffffff;
     box-shadow: -1rpx 2rpx 9rpx 1rpx rgba(43, 90, 255, 0.1);
@@ -98,9 +96,9 @@ page::after {
 }
 // 列表区域
 .list {
-  margin-top: 205rpx;
+  margin-top: 250rpx;
   padding: 0 30rpx;
-  height: 82vh;
+  height: 83vh;
   overflow-y: auto;
 }
 // 列表项
@@ -169,14 +167,75 @@ view.item {
     .gobtn {
       margin-left: 43rpx;
       padding: unset;
-      line-height: 58rpx;
-      font-size: 28rpx;
-      font-family: PingFang SC;
-      color: #ffffff;
-      width: 160rpx;
-      height: 58rpx;
-      border-radius: 10px;
-      background-color: #3488f8;
+      .van-button {
+        width: 160rpx;
+        height: 58rpx;
+        border-radius: 10px;
+        background-color: #3488f8;
+        .van-button__text {
+          line-height: 58rpx;
+          font-size: 28rpx;
+          font-family: PingFang SC;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+// 遮罩层
+.getsucessbox {
+  position: relative;
+  width: 477rpx;
+  height: 706rpx;
+  background-color: transparent;
+
+  //  背景图
+  .sucesspic {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 463rpx;
+    height: 463rpx;
+  }
+
+  .getsucessconte {
+    text-align: center;
+    overflow: hidden;
+    font-weight: 500;
+    margin-top: 195rpx;
+    width: 477rpx;
+    height: 511rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+    // 抢单成功提示
+    .text {
+      margin-top: 231rpx;
+      font-size: 32rpx;
+      font-family: Source Han Sans CN;
+      color: #459bfc;
+    }
+    // 按钮
+    .orderdetailBtn {
+      .van-button {
+        margin: 88rpx auto 20rpx;
+        width: 400rpx;
+        height: 80rpx;
+        background: #459bfc;
+        border-radius: 44rpx;
+        .van-button__text {
+          line-height: 80rpx;
+          font-size: 32rpx;
+          font-family: Source Han Sans CN;
+          font-weight: 400;
+          color: #ffffff;
+        }
+      }
+    }
+    .back {
+      font-size: 26rpx;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #858585;
     }
   }
 }

@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "order-message":"../../components/ordermessage/ordermessage"
+  },
   "navigationStyle": "custom"
 }

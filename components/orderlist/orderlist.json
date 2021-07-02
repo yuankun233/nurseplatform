@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "btns": "../../components/orderlist/btns/btns"
+  }
+}

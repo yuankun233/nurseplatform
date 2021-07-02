@@ -1,0 +1,56 @@
+<!--components/homeheader.wxml-->
+<text class="realtit">首页</text>
+<!-- 顶部导航 -->
+<view class="header" style="padding-top:{{statusBarHeight}}px">
+  <!-- 背景图 -->
+  <image
+    class="banner"
+    src="../../assets/banner.png"
+    mode="widthFix"
+    lazy-load="false"
+    binderror=""
+    bindload=""
+  />
+  <view class="top">
+    <image
+      class="back"
+      src="../../assets/back.png"
+      mode="widthFix"
+      lazy-load="false"
+      bind:tap="back"
+    />
+
+    <text class="tit" style="opacity:0">首页</text>
+    <view class="nav">
+      <!-- 搜索框 -->
+      <view class="input" catch:tap="goSearch">
+        <input
+          class="searchbtn"
+          size="mini"
+          type="default"
+          placeholder="快速搜索"
+        >
+        </input>
+        <image
+          class="search"
+          src="../../assets/search.png"
+          mode="widthFix"
+        />
+
+      </view>
+      <!-- 服务时间 -->
+      <view class="servetime">
+        选择服务时间
+        <image
+          class="rili"
+          src="../../assets/rili.png"
+          mode="widthFix"
+        />
+      </view>
+
+    </view>
+  </view>
+
+  <!-- 导航 -->
+</view>
+

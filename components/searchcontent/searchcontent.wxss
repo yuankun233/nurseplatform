@@ -1,0 +1,35 @@
+/* components/searchcontent/searchcontent.wxss */
+.content {
+  margin: 240rpx 0 0 30rpx;
+  padding: 38rpx 38rpx 0;
+  width: 690rpx;
+  height: 82vh;
+  background: #ffffff;
+  border-radius: 12rpx;
+}
+.content .tit {
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 36rpx;
+}
+.content .historylist {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.content .historylist .historyitem {
+  margin-right: 30rpx;
+  margin-bottom: 20rpx;
+  padding: 0 30rpx;
+  width: 154rpx;
+  height: 44rpx;
+  background: #eeeeee;
+  border-radius: 20rpx;
+  font-size: 22rpx;
+  line-height: 44rpx;
+  font-family: PingFang SC;
+  text-align: center;
+  color: #000000;
+}

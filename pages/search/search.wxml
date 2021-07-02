@@ -1,0 +1,6 @@
+<!--pages/search/search.wxml-->
+<!-- 顶部区域 -->
+<home-header></home-header>
+<!-- 搜索内容 -->
+<search-content></search-content>
+

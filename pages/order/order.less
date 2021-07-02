@@ -13,14 +13,39 @@
 .title {
   text-align: center;
   background-color: #fff;
-  padding: 63rpx 0 43rpx 0;
+  padding: 63rpx 0 20rpx 0;
   font-size: 38rpx;
   font-family: PingFang SC;
   font-weight: 800;
   color: #000000;
 }
-// 列表
-view.item {
+// tab栏样式
+.van-tabs__wrap {
+  height: 66rpx !important;
+}
+// 标题默认样式
+.van-tab {
+  line-height: 66rpx !important;
+  color: #707070 !important;
+}
+// 标题激活样式
+.van-tab--active {
+  color: #3488f8 !important;
+}
+// 底部小条
+.van-tabs__line {
+  left: 15rpx !important;
+  width: 94rpx !important;
+  height: 4rpx !important;
+  background-color: #3488f8 !important;
+}
+
+// 待服务列表
+.item:first-child {
+  margin-top: unset;
+}
+.item {
+  position: relative;
   margin-top: 20rpx;
   background-color: #fff;
   padding: 20rpx 30rpx;
@@ -81,34 +106,56 @@ view.item {
     }
   }
   .btns {
-    .calluser {
-      position: absolute;
-      bottom: 91rpx;
-      right: 30rpx;
-      padding: unset;
-      width: 140rpx;
-      height: 46rpx;
-      background: #ffffff;
-      border: unset !important;
-      border: 1rpx solid #b5b5b5;
-      border-radius: 10rpx;
-      line-height: 46rpx !important;
-      font-size: 23rpx;
-      font-family: PingFang SC;
-      color: #888888;
+    position: absolute;
+    right: 30rpx;
+    top: 129rpx;
+    .flexbox {
+      display: flex;
+      flex-direction: column;
+      .van-button {
+        width: 140rpx !important;
+        height: 46rpx !important;
+        border-radius: 10rpx !important;
+        .van-button__text {
+          line-height: 46rpx !important;
+          font-size: 23rpx !important;
+          font-family: PingFang SC !important;
+        }
+      }
+      .calluser {
+        margin-bottom: 18rpx;
+        .van-button {
+          background: #ffffff !important;
+          border: 1rpx solid #b5b5b5 !important;
+          .van-button__text {
+            color: #888888 !important;
+          }
+        }
+      }
+      .go {
+        .van-button {
+          background: #3488f8 !important;
+          .van-button__text {
+            color: #fff !important;
+          }
+        }
+      }
     }
-    .go {
-      position: absolute;
-      bottom: 18rpx;
-      right: 30rpx;
-      padding: unset;
-      width: 140rpx;
-      height: 46rpx;
-      background: #3488f8;
-      border-radius: 10rpx;
+  }
+}
+
+// 服务中录音按钮
+
+.recordBtn {
+  .van-button {
+    margin: 117rpx 0 0 245rpx;
+    width: 200rpx;
+    height: 58rpx;
+    background: #3488f8;
+    border-radius: 10rpx;
+    .van-button__text {
       font-size: 23rpx;
       font-family: PingFang SC;
-      line-height: 46rpx;
       color: #ffffff;
     }
   }

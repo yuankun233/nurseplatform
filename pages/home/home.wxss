@@ -42,10 +42,9 @@ page::after {
   z-index: 99;
 }
 .nav {
-  margin-bottom: 36rpx;
-  padding: 0 30rpx;
-  margin-top: 47rpx;
-  text-align: center;
+  position: fixed;
+  top: 160rpx;
+  left: 30rpx;
 }
 .nav .input {
   position: relative;
@@ -75,7 +74,7 @@ page::after {
   padding-left: 20rpx;
   position: relative;
   left: 444rpx;
-  width: 260rpx;
+  width: 248rpx;
   height: 58rpx;
   background: #ffffff;
   box-shadow: -1rpx 2rpx 9rpx 1rpx rgba(43, 90, 255, 0.1);
@@ -92,9 +91,9 @@ page::after {
   width: 28rpx;
 }
 .list {
-  margin-top: 205rpx;
+  margin-top: 250rpx;
   padding: 0 30rpx;
-  height: 82vh;
+  height: 83vh;
   overflow-y: auto;
 }
 view.item {
@@ -156,12 +155,65 @@ view.item view.right .price {
 view.item view.right .gobtn {
   margin-left: 43rpx;
   padding: unset;
-  line-height: 58rpx;
-  font-size: 28rpx;
-  font-family: PingFang SC;
-  color: #ffffff;
+}
+view.item view.right .gobtn .van-button {
   width: 160rpx;
   height: 58rpx;
   border-radius: 10px;
   background-color: #3488f8;
+}
+view.item view.right .gobtn .van-button .van-button__text {
+  line-height: 58rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  color: #ffffff;
+}
+.getsucessbox {
+  position: relative;
+  width: 477rpx;
+  height: 706rpx;
+  background-color: transparent;
+}
+.getsucessbox .sucesspic {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 463rpx;
+  height: 463rpx;
+}
+.getsucessbox .getsucessconte {
+  text-align: center;
+  overflow: hidden;
+  font-weight: 500;
+  margin-top: 195rpx;
+  width: 477rpx;
+  height: 511rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+.getsucessbox .getsucessconte .text {
+  margin-top: 231rpx;
+  font-size: 32rpx;
+  font-family: Source Han Sans CN;
+  color: #459bfc;
+}
+.getsucessbox .getsucessconte .orderdetailBtn .van-button {
+  margin: 88rpx auto 20rpx;
+  width: 400rpx;
+  height: 80rpx;
+  background: #459bfc;
+  border-radius: 44rpx;
+}
+.getsucessbox .getsucessconte .orderdetailBtn .van-button .van-button__text {
+  line-height: 80rpx;
+  font-size: 32rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #ffffff;
+}
+.getsucessbox .getsucessconte .back {
+  font-size: 26rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #858585;
 }

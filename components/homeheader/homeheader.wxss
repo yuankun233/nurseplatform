@@ -1,0 +1,92 @@
+/* pages/home/home.wxss */
+page {
+  background-color: #f7f7f7;
+  z-index: 99;
+}
+/* 绝对定位箭头的位置会受组件的影响，所以设置bottom */
+.back {
+  position: absolute;
+  width: 24rpx;
+  height: 40rpx;
+  bottom: 85rpx;
+  left: 30rpx;
+  z-index: 999;
+}
+.banner {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+.realtit {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 63rpx;
+  z-index: 999;
+  font-size: 38rpx;
+  font-weight: 800;
+  font-family: PingFang SC;
+  color: #fff;
+}
+.tit {
+  z-index: 999;
+  font-size: 38rpx;
+  font-weight: 800;
+  font-family: PingFang SC;
+  color: #fff;
+}
+.top {
+  position: relative;
+  text-align: center;
+  position: fixed;
+  z-index: 99;
+}
+.nav {
+  position: fixed;
+  top: 160rpx;
+  left: 30rpx;
+}
+.nav .input {
+  position: relative;
+}
+.nav .input .search {
+  position: absolute;
+  left: 75rpx;
+  top: 15rpx;
+  height: 28rpx;
+  width: 28rpx;
+}
+.nav .input .searchbtn {
+  text-align: left;
+  position: absolute;
+  left: 52rpx;
+  padding-left: 68rpx !important;
+  width: 340rpx;
+  height: 58rpx;
+  background: #ffffff;
+  box-shadow: -1rpx 2rpx 9rpx 1rpx rgba(43, 90, 255, 0.1);
+  border-radius: 29rpx;
+  font-size: 28rpx;
+  line-height: 58rpx;
+  color: #a3a3a3;
+}
+.nav .servetime {
+  padding-left: 20rpx;
+  position: relative;
+  left: 444rpx;
+  width: 248rpx;
+  height: 58rpx;
+  background: #ffffff;
+  box-shadow: -1rpx 2rpx 9rpx 1rpx rgba(43, 90, 255, 0.1);
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  line-height: 58rpx;
+  color: #a3a3a3;
+}
+.nav .servetime .rili {
+  position: absolute;
+  left: 17rpx;
+  top: 15rpx;
+  height: 28rpx;
+  width: 28rpx;
+}

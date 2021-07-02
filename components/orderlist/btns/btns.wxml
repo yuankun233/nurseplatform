@@ -1,0 +1,23 @@
+<!--components/orderlist/btns/btns.wxml-->
+<!-- 订单列表按钮 -->
+<view class="flex">
+  <van-button class="calluser" catch:tap="calluser">
+    联系客户
+  </van-button>
+  <van-button
+    class="go"
+    catch:tap="go"
+    wx:if="{{btnStatus===0}}"
+  >
+    出发
+  </van-button>
+  <van-button
+    class="go"
+    catch:tap="goOrderDetail"
+    wx:if="{{btnStatus===1}}"
+  >
+    到达
+  </van-button>
+
+</view>
+

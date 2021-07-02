@@ -8,15 +8,15 @@ Page({
             title: "输液港术后护理",
             order: "4009633521453652",
             price: "132.3",
-            checked: false
+            checked: false,
           },
           {
             title: "PICC导管术后维护",
             order: "4009633521453652",
             price: "13393.3 ",
-            checked: true
-          }
-        ]
+            checked: true,
+          },
+        ],
       },
       {
         data: "2021年6月15日",
@@ -25,15 +25,15 @@ Page({
             title: "输液港术后护理",
             order: "4009633521453652",
             price: "13393.3 ",
-            checked: false
+            checked: false,
           },
           {
             title: "PICC导管术后维护",
             order: "4009633521453652",
             price: "352.2",
-            checked: true
-          }
-        ]
+            checked: true,
+          },
+        ],
       },
       {
         data: "2021年6月15日",
@@ -42,15 +42,15 @@ Page({
             title: "输液港术后护理",
             order: "4009633521453652",
             price: "13393.3 ",
-            checked: false
+            checked: false,
           },
           {
             title: "PICC导管术后维护",
             order: "4009633521453652",
             price: "352.2",
-            checked: true
-          }
-        ]
+            checked: true,
+          },
+        ],
       },
       {
         data: "2021年6月15日",
@@ -59,18 +59,18 @@ Page({
             title: "输液港术后护理",
             order: "4009633521453652",
             price: "13393.3 ",
-            checked: false
+            checked: false,
           },
           {
             title: "PICC导管术后维护",
             order: "4009633521453652",
             price: "352.2",
-            checked: true
-          }
-        ]
-      }
+            checked: true,
+          },
+        ],
+      },
     ],
-    allcheck: false
+    allcheck: false,
   },
   //多选
   userCheck: function (e) {
@@ -94,13 +94,13 @@ Page({
     })
     this.setData({
       allcheck: allcheck,
-      items: items
+      items: items,
     })
   },
   // 返回操作
   goback() {
-    wx.switchTab({
-      url: "/pages/my/my"
+    wx.navigateBack({
+      delta: 1,
     })
-  }
+  },
 })

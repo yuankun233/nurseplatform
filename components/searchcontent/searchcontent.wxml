@@ -1,0 +1,13 @@
+<!--components/searchcontent/searchcontent.wxml-->
+<view class="content">
+  <view class="tit">
+    搜索历史
+  </view>
+  <!-- 历史列表 -->
+  <view class="historylist">
+    <view class="historyitem" wx:for="{{4}}">
+      静脉采血
+    </view>
+  </view>
+</view>
+
