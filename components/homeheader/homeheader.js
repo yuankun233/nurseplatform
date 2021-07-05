@@ -16,10 +16,10 @@ Component({
   methods: {
     // 返回上一页面
     back() {
-      console.log('返回首页')
+      console.log("返回首页")
       wx.navigateBack({
-        delta: 1,
+        delta: 1
       })
-    },
-  },
+    }
+  }
 })

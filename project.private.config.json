@@ -53,6 +53,18 @@
           "pathName": "pages/search/search",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "护士认证2",
+          "pathName": "pages/post_au/post_au",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "护士认证",
+          "pathName": "pages/nurse_au/nurse_au",
+          "query": "",
+          "scene": null
         }
       ]
     }

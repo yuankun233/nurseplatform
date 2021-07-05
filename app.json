@@ -6,17 +6,21 @@
     "van-overlay": "./miniprogram_npm/vant-weapp/overlay/index",
     "van-popup": "./miniprogram_npm/vant-weapp/popup/index",
     "van-grid": "@vant/weapp/grid/index",
-    "van-grid-item": "@vant/weapp/grid-item/index"
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-calendar": "@vant/weapp/calendar/index"
   },
   "pages": [
     "pages/home/home",
     "pages/search/search",
+    "pages/search_time/search_time",
     "pages/order/order",
     "pages/my/my",
     "pages/orderdetail/orderdetail",
     "pages/waitclose/waitclose",
     "pages/zgrz/zgrz",
-    "pages/sfrz/sfrz"
+    "pages/sfrz/sfrz",
+    "pages/post_au/post_au",
+    "pages/nurse_au/nurse_au"
   ],
   "window": {
     "backgroundTextStyle": "light",

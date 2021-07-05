@@ -1,0 +1,116 @@
+.nav {
+  position: fixed;
+  padding-top: 50rpx;
+  top: 0;
+  width: 100%;
+  height: 128rpx;
+  background-color: #4178f0;
+  text-align: center;
+  .back {
+    position: absolute;
+    top: 63rpx;
+    left: 13rpx; 
+    width: 20rpx;
+    height: 35rpx;
+  }
+  .title {
+    font-size: 40rpx;
+    font-family: PingFang SC;
+    color: #ffffff;
+  }
+}
+page {
+  padding-top: 128rpx;
+  background: #FAFBFFFF;
+}
+// 步骤条
+.steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center ;
+  padding: 0 34rpx;
+  font-size: 28rpx;
+  font-family: PingFang;
+  font-weight: 400;
+  color: #e6e6e6;
+}
+// 未认证
+.wrz{
+  padding-left:30rpx;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  font-family: PingFang;
+  color: #5C5C5CFF;
+  font-weight: 400;
+  margin-top: 10rpx;
+  .gant{
+    font-size: 0;
+      width: 26rpx;
+      height: 26rpx;
+      vertical-align: middle;
+      margin-right:20rpx ;
+  }
+}
+// 认证说明
+.explain{
+  margin-left: 30rpx;
+  margin-top: 45rpx;
+  height: 70rpx;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  font-size: 20rpx;
+  font-family: PingFang;
+  color: #999999FF;
+}
+//认证列表
+.rzlist{
+  width: 703rpx;
+  height: 143rpx;
+  margin-left:23rpx ;
+  display: flex;
+  margin-top: 32rpx;
+  position: relative;
+  .cuboid{
+    width: 703rpx;
+    height: 143rpx;
+    position: fixed;
+    z-index: -999;
+  }
+  .glimg{
+    image{
+      width: 53rpx;
+      height: 60rpx;
+    }
+    margin-left: 33rpx;
+    margin-top: 42rpx;
+  }
+  .rzxx{
+    margin-left: 32rpx;
+    view:nth-child(1){
+      font-size: 36rpx;
+      font-family: PingFang SC;
+      font-weight: 600;
+      color: #282626;
+      text-align: start;
+      margin-top: 28rpx;
+    }
+    view:nth-child(2){
+      font-size: 20rpx;
+      font-family: PingFang;
+      font-weight: 400;
+      color: #878787;
+      margin-top: 6rpx;
+    }
+  }
+  .aswitch{
+    font-size: 26rpx;
+    font-family: PingFang;
+    color:#FFFFFFFF;
+    position: absolute;
+    top: 87rpx;
+    left: 622rpx;
+    transform: rotate(-45deg);
+  }
+}

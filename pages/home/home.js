@@ -23,7 +23,7 @@ Page({
     // 隐藏模态层
     setTimeout(() => {
       this.hideModal()
-    }, 100)
+    }, 10)
   },
   // 前往搜索页
   goSearch() {

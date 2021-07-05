@@ -1,6 +1,84 @@
-<!--pages/search/search.wxml-->
+<!-- pages/search/search.wxml -->
 <!-- 顶部区域 -->
-<home-header></home-header>
+<!-- <home-header></home-header> -->
 <!-- 搜索内容 -->
-<search-content></search-content>
+<!-- <search-content></search-content> -->
+<!-- 日历 -->
+<!-- <search-time></search-time> -->
+
+<!-- 头部 -->
+<text class="realtit">首页</text>
+<!-- 顶部导航 -->
+<view class="header" style="padding-top:{{statusBarHeight}}px">
+  <!-- 背景图 -->
+  <image
+    class="banner"
+    src="../../assets/banner.png"
+    mode="widthFix"
+    lazy-load="false"
+    binderror=""
+    bindload=""
+  />
+  <view class="top">
+    <image
+      class="back"
+      src="../../assets/back.png"
+      mode="widthFix"
+      lazy-load="false"
+      bind:tap="back"
+    />
+
+    <text class="tit" style="opacity:0">首页</text>
+    <view class="nav">
+      <!-- 搜索框 -->
+      <view class="input" catch:tap="goSearch">
+        <input
+          class="searchbtn"
+          size="mini"
+          type="default"
+          placeholder="快速搜索"
+        >
+        </input>
+        <image
+          class="search"
+          src="../../assets/search.png"
+          mode="widthFix"
+        />
+
+      </view>
+      <!-- 服务时间 -->
+      <view class="servetime" bind:tap="showPopup">
+        选择服务时间
+        <image
+          class="rili"
+          src="../../assets/rili.png"
+          mode="widthFix"
+        />
+      </view>
+
+    </view>
+  </view>
+
+  <!-- 导航 -->
+</view>
+<!-- 搜索内容 -->
+<view class="content">
+  <view class="tit">
+    搜索历史
+  </view>
+
+  <view class="historylist">
+    <view class="historyitem" wx:for="{{4}}">
+      静脉采血
+    </view>
+  </view>
+
+</view>
+<van-popup
+  show="{{ timeSelectShow }}"
+  bind:close="onClose"
+  position="bottom"
+>
+  <calender></calender>
+</van-popup>
 

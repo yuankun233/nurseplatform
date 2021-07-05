@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "home-header": "../../components/homeheader/homeheader",
-    "search-content": "../../components/searchcontent/searchcontent"
+    "search-content": "../../components/searchcontent/searchcontent",
+    "search-time": "../../components/searchtime/searchtime",
+    "calender": "../../components/calender/calender"
   }
 }

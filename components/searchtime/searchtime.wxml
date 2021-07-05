@@ -1,0 +1,10 @@
+<!--components/searchtime/searchtime.wxml-->
+<view class="content">
+  <view class="tit">
+    搜索历史
+  </view>
+  <!-- 历史列表 -->
+  <view class="historylist">
+    <van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />
+  </view>
+</view>

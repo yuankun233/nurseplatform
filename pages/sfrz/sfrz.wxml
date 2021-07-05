@@ -178,7 +178,7 @@
 />
 
 <!-- 下一步 -->
-<button class="nextbtn" bind:tap="next">
+<button class="nextbtn" bind:tap="jumpNext">
   下一步
 </button>
 

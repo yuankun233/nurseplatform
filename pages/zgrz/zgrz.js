@@ -1,17 +1,13 @@
 // pages/zgrz/zgrz.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    date: '2018-12-25',//时间选择
-    nowdate:''
+    date: "2018-12-25", //时间选择
+    nowdate: ""
   },
-  onload(){
-
-  
-  },
+  onload() {},
   // 选择日期
   DateChange(e) {
     this.setData({
@@ -20,15 +16,14 @@ Page({
   },
   // 返回操作
   goback() {
-    wx.switchTab({
-      url: "/pages/my/my"
+    wx.navigateBack({
+      delta: 1
     })
   },
   // 下一步
-  next(){
+  next() {
     wx.navigateTo({
-      url: '/pages/sfrz/sfrz'
-    });
-      
+      url: "/pages/sfrz/sfrz"
+    })
   }
 })

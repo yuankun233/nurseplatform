@@ -1,0 +1,38 @@
+<view class="nav">
+  <image class="back" src="../../assets/back.png" mode="widthFix" lazy-load="false" bind:tap="goback" />
+  <span class="title">资格认证</span>
+</view>
+<!-- 步骤条 -->
+<view class="steps">
+  <span>基本信息</span>
+  <span style="font-size:40rpx">﹥</span>
+  <span>身份认证</span>
+  <span style="font-size:40rpx">﹥</span>
+  <span style="color:#4178F0">岗位认证</span>
+</view>
+<!-- 未认证 -->
+<view class="wrz">
+  <view class="gant">
+    <image src="../../assets/gant.png" mode="widthFix" lazy-load="false" />
+  </view>
+  <span>
+    未认证
+  </span>
+</view>
+<!-- 说明 -->
+<view class="explain">
+  <span>1.请选择需要认证的岗位;</span>
+  <span>2.上传的证书信息，需要和个人基本信息保持一致。</span>
+</view>
+<!-- 认证列表 -->
+<view class="rzlist" wx:for="{{rzlist}}" wx:key="*this" bindtap="Jump" data-id="{{index}}">
+  <view class="glimg">
+    <image class="" src="{{item.Image}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+  </view>
+  <view class="rzxx">
+    <view>{{item.name}}</view>
+    <view>{{item.introduce}}</view>
+  </view>
+  <image class="cuboid" src="../../assets/cuboid.png" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+  <view class="aswitch">{{item.xgdata}}</view>
+</view>

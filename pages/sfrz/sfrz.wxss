@@ -121,9 +121,7 @@ page {
   color: #999999;
 }
 .nextbtn {
-  position: fixed;
-  left: 104rpx;
-  bottom: 60rpx;
+  margin-top: 250rpx;
   width: 543rpx;
   height: 88rpx;
   background: #4178f0;
