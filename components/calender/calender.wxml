@@ -21,10 +21,7 @@
         <view class="iconfont icon-playfill"></view>
       </view>
     </view>
-    <view class="flex open">
-      <view>{{open?"收起":"展开"}}</view>
-      <view style="margin-left:6rpx;font-size:20rpx" class="iconfont icon-{{open?'fold':'unfold'}}"></view>
-    </view>
+
   </view>
 
   <!-- 日历头部 -->

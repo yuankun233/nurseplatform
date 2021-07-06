@@ -31,7 +31,11 @@
     <text class="tit" style="opacity:0">首页</text>
     <view class="nav">
       <!-- 搜索框 -->
-      <view class="input" catch:tap="goSearch">
+      <view
+        class="input"
+        bind:tap="switchSearch"
+        data-mode="history"
+      >
         <input
           class="searchbtn"
           size="mini"
@@ -47,7 +51,11 @@
 
       </view>
       <!-- 服务时间 -->
-      <view class="servetime" bind:tap="showPopup">
+      <view
+        class="servetime"
+        bind:tap="switchSearch"
+        data-mode="time"
+      >
         选择服务时间
         <image
           class="rili"
@@ -62,7 +70,7 @@
   <!-- 导航 -->
 </view>
 <!-- 搜索内容 -->
-<view class="content">
+<view class="content" wx:if="{{searchStatus==='history'}}">
   <view class="tit">
     搜索历史
   </view>
@@ -72,13 +80,55 @@
       静脉采血
     </view>
   </view>
+</view>
+<view class="timesearch" wx:if="{{searchStatus==='time'}}">
+  <view class="tit">
+    选择时间
+  </view>
+  <view class="wrapper">
+    <calendar class="calendarUtil"></calendar>
+    <view class="timeSelect">
+      <view
+        class="{{btnStatus==='am'?'btnActive btn':'btn'}}"
+        bind:tap="switchBtn"
+        data-time="am"
+      >
+        上午
+        <view class=" time_dur">
+          8:00 to 12:00
+        </view>
+
+      </view>
+      <view
+        class="{{btnStatus==='noon'?'btnActive btn':'btn'}}"
+        bind:tap="switchBtn"
+        data-time="noon"
+      >
+        下午
+        <view class="time_dur">
+          13:00 to 18:00
+        </view>
+      </view>
+      <view
+        class="{{btnStatus==='pm'?'btnActive btn':'btn'}}"
+        bind:tap="switchBtn"
+        data-time="pm"
+      >
+        晚上
+        <view class="time_dur">
+          18:00 to 22:00
+        </view>
+      </view>
+    </view>
+  </view>
 
 </view>
-<van-popup
+<!-- <van-popup
   show="{{ timeSelectShow }}"
   bind:close="onClose"
+  custom-style="height: 82%;width:92%;border-radius:12rpx;"
   position="bottom"
 >
-  <calender></calender>
-</van-popup>
+  <calendar></calendar>
+</van-popup> -->
 

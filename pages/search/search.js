@@ -5,7 +5,8 @@ Page({
    */
   data: {
     date: "",
-    timeSelectShow: false
+    // 按钮模式
+    btnStatus: "am"
   },
   back() {
     console.log("返回首页")
@@ -13,12 +14,22 @@ Page({
       delta: 1
     })
   },
-  // 日历弹出层
-  showPopup() {
-    this.setData({ timeSelectShow: true })
+  // 选择时间按钮切换
+  switchBtn(e) {
+    console.log(e.currentTarget.dataset)
+    this.setData({
+      btnStatus: e.currentTarget.dataset.time
+    })
   },
-
-  onClose() {
-    this.setData({ timeSelectShow: false })
+  onLoad(options) {
+    // 根据传入模式显示对应的搜索模式
+    this.setData({
+      searchStatus: options.searchStatus
+    })
+  },
+  switchSearch(e) {
+    this.setData({
+      searchStatus: e.currentTarget.dataset.mode
+    })
   }
 })

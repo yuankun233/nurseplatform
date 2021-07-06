@@ -24,6 +24,9 @@
   line-height: 66rpx !important;
   color: #707070 !important;
 }
+.van-hairline--top-bottom:after {
+  display: none;
+}
 .van-tab--active {
   color: #3488f8 !important;
 }

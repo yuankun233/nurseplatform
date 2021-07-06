@@ -15,7 +15,11 @@
     <text class="tit" style="opacity:0">首页</text>
     <view class="nav">
       <!-- 搜索框 -->
-      <view class="input" catch:tap="goSearch">
+      <view
+        class="input"
+        catch:tap="goSearch"
+        data-mode="history"
+      >
         <button
           class="searchbtn"
           size="mini"
@@ -30,7 +34,11 @@
 
       </view>
       <!-- 服务时间 -->
-      <view class="servetime">
+      <view
+        class="servetime"
+        catch:tap="goSearch"
+        data-mode="time"
+      >
         选择服务时间
         <image
           class="rili"

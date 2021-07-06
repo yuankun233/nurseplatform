@@ -34,8 +34,7 @@
     "color": "#8D8D8D",
     "selectedColor": "#000000",
     "backgroundColor": "#fff",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "./assets/home.png",
@@ -54,5 +53,11 @@
         "selectedIconPath": "./assets/my-active.png"
       }
     ]
+  },
+  "plugins": {
+    "calendar": {
+      "version": "1.1.0",
+      "provider": "wxa3eebcbd5f0cd759"
+    }
   }
 }

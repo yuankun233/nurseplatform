@@ -134,7 +134,7 @@
 }
 
 .calendar .calendar-main {
-  padding: 30rpx 25rpx;
+  margin: 30rpx 25rpx;
   transition: height 0.3s;
   align-content: flex-start;
   overflow: hidden;
@@ -142,7 +142,7 @@
 
 .calendar .calendar-main .day {
   position: relative;
-  width: 80rpx;
+  width: 87rpx;
   color: #666;
   text-align: center;
   height: 72rpx;
