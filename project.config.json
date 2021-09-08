@@ -4,7 +4,7 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": false,
+    "urlCheck": true,
     "es6": true,
     "enhance": true,
     "postcss": true,
@@ -24,7 +24,7 @@
     "lazyloadPlaceholderEnable": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": false,
+    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -40,7 +40,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.17.3",
-  "appid": "wx207a9b488af459ab",
+  "appid": "wx215bd044305d4fa9",
   "projectname": "nurseplatform2",
   "debugOptions": {
     "hidedInDevtools": []

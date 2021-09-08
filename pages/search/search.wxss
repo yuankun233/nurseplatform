@@ -182,3 +182,18 @@ page {
   font-family: DIN Light;
   color: #878787;
 }
+.timesearch .configAndCancel {
+  margin-top: 64rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  color: #808080;
+}
+.timesearch .configAndCancel view {
+  text-align: center;
+  width: 50%;
+}
+.timesearch .configAndCancel .config {
+  color: #3488f8;
+}

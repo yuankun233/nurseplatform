@@ -1,4 +1,5 @@
 <!--components/orderlist/orderlist.wxml-->
+<!-- 已服务列表 -->
 <view
   class="item"
   wx:for="{{tabs}}"

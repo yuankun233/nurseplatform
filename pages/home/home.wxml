@@ -4,16 +4,16 @@
 <view class="header" style="padding-top:{{statusBarHeight}}px">
   <!-- 背景图 -->
   <image
-    class="banner"
+    class="banner666"
     src="../../assets/banner.png"
     mode="widthFix"
     lazy-load="false"
     binderror=""
     bindload=""
   />
-  <view class="top">
+  <view class="top666">
     <text class="tit" style="opacity:0">首页</text>
-    <view class="nav">
+    <view class="nav666">
       <!-- 搜索框 -->
       <view
         class="input"
@@ -139,11 +139,7 @@
         恭喜您，抢单成功！
       </view>
       <van-button class="orderdetailBtn" bind:tap="goOrderDetail">查看订单</van-button>
-      <view
-        class="back"
-        bind:tap="hideModal"
-        data-target="Image"
-      >
+      <view class="back" bind:tap="hideModal">
         返回首页
       </view>
     </view>

@@ -1,0 +1,53 @@
+.phone {
+  padding-top: 136.5rpx;
+}
+.phone .phone_1 {
+  font-family: SourceHanSansCN-Medium;
+  font-size: 60rpx;
+  color: #343434;
+  font-weight: 700;
+  margin-left: 37rpx;
+  margin-bottom: 60rpx;
+}
+.phone .input {
+  display: flex;
+  width: 670rpx;
+  border-bottom: 1px solid #cccccc;
+  height: 90rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+}
+.phone .input input {
+  display: block;
+  width: 500rpx;
+  height: 90rpx;
+}
+.phone .input text {
+  color: #54ae68;
+  line-height: 90rpx;
+  font-size: 32rpx;
+}
+.phone .input .AA {
+  font-size: 32rpx;
+  line-height: 90rpx !important;
+}
+.phone .button_1 {
+  display: block;
+  width: 668rpx;
+  border-radius: 46rpx;
+  background-color: #cfcfcf;
+  margin: 0 auto;
+  margin-top: 60rpx;
+  height: 92rpx;
+  line-height: 92rpx;
+}
+.phone .button_2 {
+  display: block;
+  width: 668rpx;
+  border-radius: 46rpx;
+  background-color: #46b82d;
+  margin: 0 auto;
+  margin-top: 60rpx;
+  height: 92rpx;
+  line-height: 92rpx;
+}

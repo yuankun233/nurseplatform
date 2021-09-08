@@ -11,22 +11,19 @@
   },
   "pages": [
     "pages/home/home",
+    "pages/login/login",
+    "pages/phone/phone",
     "pages/search/search",
     "pages/search_time/search_time",
     "pages/order/order",
     "pages/my/my",
     "pages/orderdetail/orderdetail",
-    "pages/waitclose/waitclose",
-    "pages/zgrz/zgrz",
-    "pages/sfrz/sfrz",
-    "pages/post_au/post_au",
-    "pages/nurse_au/nurse_au"
+    "pages/waitclose/waitclose"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTextStyle": "black",
-    "navigationStyle": "custom"
+    "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {

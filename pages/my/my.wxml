@@ -15,16 +15,18 @@
   <view class="headpic">
     <image
       mode="widthFix"
-      src="../../assets/touxiang.png"
+      src="{{isLogin?user.img:'../../assets/unlogin.png'}}"
+      style="border-radius:50%"
       lazy-load="{{true}}"
+      bind:tap="toLogin"
     ></image>
   </view>
 
   <view class="profile">
-    <view class="name">王小蒙</view>
-    <view class="id">
+    <view class="name" bind:tap="toLogin">{{isLogin?user.nickname:'登录/注册'}}</view>
+    <!-- <view class="id">
       ID:95279527
-    </view>
+    </view> -->
   </view>
   <view class="verifyed">
     已认证
@@ -123,7 +125,7 @@
       mode="widthFix"
     />
   </view>
-  <view class="zgrz item" bind:tap="tozgrz">
+  <view class="zgrz item">
     <view class="flexbox">
       <image
         class="pic"

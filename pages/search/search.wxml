@@ -120,15 +120,23 @@
         </view>
       </view>
     </view>
+    <view class="configAndCancel">
+      <view
+        class="cancel"
+        bind:tap="switchSearch"
+        data-mode="history"
+      >
+        取消
+      </view>
+      <view
+        class="config"
+        bind:tap="switchSearch"
+        data-mode="history"
+      >
+        完成
+      </view>
+    </view>
   </view>
 
 </view>
-<!-- <van-popup
-  show="{{ timeSelectShow }}"
-  bind:close="onClose"
-  custom-style="height: 82%;width:92%;border-radius:12rpx;"
-  position="bottom"
->
-  <calendar></calendar>
-</van-popup> -->
 

@@ -51,7 +51,7 @@
         {
           "name": "搜索页面",
           "pathName": "pages/search/search",
-          "query": "",
+          "query": "searchStatus=time",
           "scene": null
         },
         {
@@ -63,6 +63,18 @@
         {
           "name": "护士认证",
           "pathName": "pages/nurse_au/nurse_au",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "登录",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "手机号登录注册",
+          "pathName": "pages/phone/phone",
           "query": "",
           "scene": null
         }

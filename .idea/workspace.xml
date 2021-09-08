@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53257698-c11d-4ba2-9846-b6930993651f" name="Default Changelist" comment="" />
+    <list default="true" id="53257698-c11d-4ba2-9846-b6930993651f" name="Default Changelist" comment="Default Changelist">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/calender/calender.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/calender/calender.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/calender/calender.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/components/calender/calender.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/calender/calender.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/components/calender/calender.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/orderlist/orderlist.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/components/orderlist/orderlist.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/home/home.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/home.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/my.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/nurse_au/nurse_au.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/nurse_au/nurse_au.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/nurse_au/nurse_au.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/nurse_au/nurse_au.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order/order.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/order.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/post_au/post_au.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/post_au/post_au.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/post_au/post_au.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/post_au/post_au.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/post_au/post_au.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/search/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/search.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/search/search.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/search.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/search/search.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/search.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/search/search.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/search.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/sfrz/sfrz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/sfrz/sfrz.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/sfrz/sfrz.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/sfrz/sfrz.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/sfrz/sfrz.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/zgrz/zgrz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/zgrz/zgrz.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/zgrz/zgrz.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/zgrz/zgrz.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/zgrz/zgrz.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.private.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.private.config.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,8 +55,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Vue3.0/firstVue3" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -33,6 +73,11 @@
       <updated>1625188762398</updated>
       <workItem from="1625188764841" duration="89000" />
       <workItem from="1625188856327" duration="814000" />
+      <workItem from="1625629093154" duration="522000" />
+      <workItem from="1625629672216" duration="127000" />
+      <workItem from="1625629815061" duration="49000" />
+      <workItem from="1629268151895" duration="2294000" />
+      <workItem from="1629342395607" duration="15000" />
     </task>
     <servers />
   </component>

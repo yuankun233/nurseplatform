@@ -1,6 +1,5 @@
 {
   "usingComponents": {
-    "mp-tabs": "@miniprogram-component-plus/tabs",
     "order-message":"../../components/ordermessage/ordermessage",
     "order-list":"../../components/orderlist/orderlist"
   },

@@ -1,0 +1,42 @@
+<!--pages/login/login.wxml-->
+<view class="login">
+  <image
+    class="login_img_1"
+    mode="aspectFill"
+    src="https://www.xiaohulaile.com/wxcx/logo.png"
+  ></image>
+  <image class="login_img_2" src="https://www.xiaohulaile.com/wxcx/slogen.png"></image>
+  <view class="serve_title">
+    小护来了服务端
+  </view>
+
+  <view class="login_view">
+    <button class="Wx_login" bindtap="loginWx">
+      <image src="https://www.xiaohulaile.com/wxcx/Wx.png"></image>
+      <text>微信用户快捷登录</text>
+    </button>
+  </view>
+  <view class="phone_login" bindtap="toLoginPhone">
+    <image src="https://www.xiaohulaile.com/wxcx/iphone.png"></image>
+    <text>手机号登陆 / 注册</text>
+  </view>
+  <view bindtap="userAgreementC" class="YH_login">
+    <text>点击　“注册/登录”　即表示您同意<text class="Text_1">《上海小护来了用户协议》、《服务条款》,</text>
+    小护来了向您保证：您的隐私绝不会外泄，请放心注册使用。
+    </text>
+  </view>
+</view>
+<!-- 拟态框 -->
+<view class="cu-modal {{modalName=='1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button>
+    </view>
+  </view>
+</view>
+

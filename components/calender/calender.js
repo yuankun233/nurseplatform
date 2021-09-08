@@ -10,7 +10,7 @@ Component({
     },
     defaultTime: {
       type: String,
-      value: ''
+      value: ""
     }
   },
 
@@ -20,9 +20,8 @@ Component({
   data: {
     dateList: [], //日历主体渲染数组
     selectDay: {}, //选中时间
-    open:true
+    open: true
   },
-
   /**
    * 组件的方法列表
    */
@@ -35,11 +34,11 @@ Component({
     formatTime(time, format) {
       function formatNumber(n) {
         n = n.toString()
-        return n[1] ? n : '0' + n
+        return n[1] ? n : "0" + n
       }
 
       function getDate(time, format) {
-        const formateArr = ['Y', 'M', 'D', 'h', 'm', 's']
+        const formateArr = ["Y", "M", "D", "h", "m", "s"]
         const returnArr = []
         const date = new Date(time)
         returnArr.push(date.getFullYear())
@@ -55,7 +54,7 @@ Component({
       }
 
       function getDateDiff(time) {
-        let r = ''
+        let r = ""
         const ft = new Date(time)
         const nt = new Date()
         const nd = new Date(nt)
@@ -69,26 +68,26 @@ Component({
             const t = parseInt(nt / 1000) - parseInt(ft / 1000)
             switch (true) {
               case t < 60:
-                r = '刚刚'
+                r = "刚刚"
                 break
               case t < 3600:
-                r = parseInt(t / 60) + '分钟前'
+                r = parseInt(t / 60) + "分钟前"
                 break
               default:
-                r = parseInt(t / 3600) + '小时前'
+                r = parseInt(t / 3600) + "小时前"
             }
             break
           case d === 1:
-            r = '昨天'
+            r = "昨天"
             break
           case d === 2:
-            r = '前天'
+            r = "前天"
             break
           case d > 2 && d < 30:
-            r = d + '天前'
+            r = d + "天前"
             break
           default:
-            r = getDate(time, 'Y-M-D')
+            r = getDate(time, "Y-M-D")
         }
         return r
       }
@@ -107,22 +106,34 @@ Component({
     },
     //上月切换按钮点击
     lastMonth() {
-      const lastMonth = new Date(this.data.selectDay.year, this.data.selectDay.month - 2)
+      const lastMonth = new Date(
+        this.data.selectDay.year,
+        this.data.selectDay.month - 2
+      )
       const year = lastMonth.getFullYear()
       const month = lastMonth.getMonth() + 1
       this.setMonth(year, month)
     },
     //下月切换按钮点击
     nextMonth() {
-      const nextMonth = new Date(this.data.selectDay.year, this.data.selectDay.month)
+      const nextMonth = new Date(
+        this.data.selectDay.year,
+        this.data.selectDay.month
+      )
       const year = nextMonth.getFullYear()
       const month = nextMonth.getMonth() + 1
       this.setMonth(year, month)
     },
     //设置月份
     setMonth(setYear, setMonth, setDay) {
-      if (this.data.selectDay.year !== setYear || this.data.selectDay.month !== setMonth) {
-        const day = Math.min(new Date(setYear, setMonth, 0).getDate(), this.data.selectDay.day)
+      if (
+        this.data.selectDay.year !== setYear ||
+        this.data.selectDay.month !== setMonth
+      ) {
+        const day = Math.min(
+          new Date(setYear, setMonth, 0).getDate(),
+          this.data.selectDay.day
+        )
         const time = new Date(setYear, setMonth - 1, setDay ? setDay : day)
         const data = {
           selectDay: {
@@ -152,10 +163,10 @@ Component({
     },
     //设置日历底下是否展示小圆点
     setSpot() {
-      const timeArr = this.data.spot.map(item => {
+      const timeArr = this.data.spot.map((item) => {
         return this.formatTime(item, "Y-M-D")
       })
-      this.data.dateList.forEach(item => {
+      this.data.dateList.forEach((item) => {
         if (timeArr.indexOf(item.dateString) !== -1) {
           item.spot = true
         } else {
@@ -167,10 +178,13 @@ Component({
       })
     },
     //日历主体的渲染方法
-    dateInit(setYear = this.data.selectDay.year, setMonth = this.data.selectDay.month) {
-      let dateList = []; //需要遍历的日历数组数据
-      let now = new Date(setYear, setMonth - 1)//当前月份的1号
-      let startWeek = now.getDay(); //目标月1号对应的星期
+    dateInit(
+      setYear = this.data.selectDay.year,
+      setMonth = this.data.selectDay.month
+    ) {
+      let dateList = [] //需要遍历的日历数组数据
+      let now = new Date(setYear, setMonth - 1) //当前月份的1号
+      let startWeek = now.getDay() //目标月1号对应的星期
       let dayNum = new Date(setYear, setMonth, 0).getDate() //当前月有多少天
       let forNum = Math.ceil((startWeek + dayNum) / 7) * 7 //当前月跨越的周数
       if (this.data.open) {
@@ -178,29 +192,34 @@ Component({
         for (let i = 0; i < forNum; i++) {
           const now2 = new Date(now)
           now2.setDate(i - startWeek + 1)
-          let obj = {};
+          let obj = {}
           obj = {
             day: now2.getDate(),
             month: now2.getMonth() + 1,
             year: now2.getFullYear(),
             dateString: this.formatTime(now2, "Y-M-D")
-          };
-          dateList[i] = obj;
+          }
+          dateList[i] = obj
         }
       } else {
         //非展开状态，只需要渲染当前周
         for (let i = 0; i < 7; i++) {
           const now2 = new Date(now)
           //当前周的7天
-          now2.setDate(Math.ceil((this.data.selectDay.day + startWeek) / 7) * 7 - 6 - startWeek + i)
-          let obj = {};
+          now2.setDate(
+            Math.ceil((this.data.selectDay.day + startWeek) / 7) * 7 -
+              6 -
+              startWeek +
+              i
+          )
+          let obj = {}
           obj = {
             day: now2.getDate(),
             month: now2.getMonth() + 1,
             year: now2.getFullYear(),
             dateString: this.formatTime(now2, "Y-M-D")
-          };
-          dateList[i] = obj;
+          }
+          dateList[i] = obj
         }
       }
       this.setData({
@@ -219,7 +238,10 @@ Component({
         day: day,
         dateString: dateString
       }
-      if (this.data.selectDay.year !== year || this.data.selectDay.month !== month) {
+      if (
+        this.data.selectDay.year !== year ||
+        this.data.selectDay.month !== month
+      ) {
         this.setMonth(year, month, day)
       } else if (this.data.selectDay.day !== day) {
         this.setData({
@@ -231,7 +253,9 @@ Component({
   },
   lifetimes: {
     attached() {
-      let now = this.data.defaultTime ? new Date(this.data.defaultTime) : new Date()
+      let now = this.data.defaultTime
+        ? new Date(this.data.defaultTime)
+        : new Date()
       let selectDay = {
         year: now.getFullYear(),
         month: now.getMonth() + 1,

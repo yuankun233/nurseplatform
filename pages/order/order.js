@@ -2,10 +2,11 @@ Page({
   onShareAppMessage() {
     return {
       title: "tabs",
-      path: "page/weui/example/tabs/tabs",
+      path: "page/weui/example/tabs/tabs"
     }
   },
   data: {
+    activeTab: 0, // 用下标控制激活的tab
     btnStatus: 0,
     tabs: [
       {
@@ -18,7 +19,7 @@ Page({
         servetime: "13:00-16:00",
         msg: "需要带压脉带以及酒精棉",
         adress: "上海市闵行区",
-        money: 150,
+        money: 150
       },
       {
         title: "服务中",
@@ -30,7 +31,7 @@ Page({
         servetime: "15:00-16:00",
         msg: "需要护士跟随",
         adress: "上海市松江区",
-        money: 250,
+        money: 250
       },
       {
         title: "已服务",
@@ -42,10 +43,9 @@ Page({
         servetime: "10:00-16:00",
         msg: "需要带压脉带",
         adress: "上海市浦东新区",
-        money: 450,
-      },
-    ],
-    activeTab: 0,
+        money: 450
+      }
+    ]
   },
 
   onLoad() {},
@@ -53,37 +53,63 @@ Page({
   onTabClick(e) {
     const index = e.detail.index
     this.setData({
-      activeTab: index,
+      activeTab: index
     })
   },
 
   onChange(e) {
     const index = e.detail.index
     this.setData({
-      activeTab: index,
+      activeTab: index
     })
   },
   handleClick(e) {
     wx.navigateTo({
-      url: "./webview",
+      url: "./webview"
     })
   },
   // 联系客户
   calluser() {
     console.log("联系客户中~~")
   },
-  // 跳转到订单详情
+  // 跳转到订单详情页面
   goOrderDetail() {
-    // 跳转到订单详情页
     wx.navigateTo({
-      url: "/pages/orderdetail/orderdetail",
+      url: "/pages/orderdetail/orderdetail"
     })
   },
   // 出发
-  go() {
+  go(e) {
+    console.log(e)
     console.log(this.data.btnStatus)
     this.setData({
-      btnStatus: 1,
+      btnStatus: 1
     })
   },
+  // 到达
+  arrive() {
+    wx.showModal({
+      title: "是否确认到达",
+      content: "确认到达后将开始服务",
+      showCancel: true,
+      cancelText: "取消",
+      cancelColor: "#000000",
+      confirmText: "确定",
+      confirmColor: "#3CC51F",
+      success: (result) => {
+        if (result.confirm) {
+          console.log("确认到达")
+          // 切换到服务中
+          this.setData({
+            activeTab: 1
+          })
+          return
+        }
+
+        console.log("取消确认")
+      },
+      fail: () => {},
+      complete: () => {}
+    })
+  }
 })

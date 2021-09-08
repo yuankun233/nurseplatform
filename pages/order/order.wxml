@@ -1,12 +1,10 @@
 <!--pages/order/order.wxml-->
-
 <!-- 标题 -->
-
 <view class="title">
   订单
 </view>
 <!-- tab栏 -->
-<van-tabs swipeable>
+<van-tabs swipeable active="{{activeTab}}">
   <van-tab title="待服务">
     <!--components/orderlist/orderlist.wxml-->
     <view
@@ -110,7 +108,7 @@
           </van-button>
           <van-button
             class="go"
-            catch:tap="goOrderDetail"
+            catch:tap="arrive"
             wx:if="{{btnStatus===1}}"
           >
             到达

@@ -1,7 +1,10 @@
 <!--components/calender/calender.wxml-->
 <view class="calendar">
-  <view class="title flex">
+  <view class="title flex" style=" border-bottom: 1rpx solid #f3f3f3;">
     <view class="flex">
+      <view class="icon" bindtap="lastMonth">
+        上一月
+      </view>
       <picker
         value="{{selectDay.year+'-'+selectDay.month}}"
         bindchange="editMonth"
@@ -10,29 +13,22 @@
         class="year-month"
       >{{selectDay.year}}.{{selectDay.month>9?selectDay.month:"0"+selectDay.month}}
       </picker>
-      <view
-        class="icon"
-        bindtap="lastMonth"
-        style="transform:rotate(180deg);"
-      >
-        <view class="iconfont icon-playfill"></view>
-      </view>
       <view class="icon" bindtap="nextMonth">
-        <view class="iconfont icon-playfill"></view>
+        下一月
       </view>
     </view>
 
   </view>
 
   <!-- 日历头部 -->
-  <view class="flex-around calendar-week">
-    <view class="view">日</view>
-    <view class="view">一</view>
-    <view class="view">二</view>
-    <view class="view">三</view>
-    <view class="view">四</view>
-    <view class="view">五</view>
-    <view class="view">六</view>
+  <view class="flex-around calendar-week" style="padding-top:16rpx">
+    <view class="view">周日</view>
+    <view class="view">周一</view>
+    <view class="view">周二</view>
+    <view class="view">周三</view>
+    <view class="view">周四</view>
+    <view class="view">周五</view>
+    <view class="view">周六</view>
   </view>
 
   <!-- 日历主体 -->

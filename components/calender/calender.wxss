@@ -38,8 +38,9 @@
 
 .flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+ 
 }
 
 .direction-column {
@@ -103,13 +104,19 @@
 }
 
 .calendar .title .year-month {
-  margin-right: 20rpx;
+  margin: 0 131rpx 0 122rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #000000;
+  line-height: 60rpx;
 }
 
 .calendar .title .icon {
-  padding: 0 16rpx;
-  font-size: 32rpx;
-  color: #999;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  color: #9c9c9c;
+  line-height: 60rpx;
 }
 
 .calendar .title .open {
@@ -131,6 +138,11 @@
 .calendar .calendar-week .view {
   width: 100rpx;
   text-align: center;
+
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #929292;
 }
 
 .calendar .calendar-main {
@@ -158,11 +170,11 @@
 
 .calendar .calendar-main .day .select {
   width: 56rpx;
+  content: "今" !important;
   border-radius: 50%;
   text-align: center;
   color: #fff;
-  background: linear-gradient(-60deg, #0fdac5, #1bc7b0);
-  box-shadow: 0px 5px 16px 0px #c6f3ed;
+  background: #3488f8;
   margin: 0 auto;
 }
 

@@ -13,7 +13,7 @@ page::after {
   z-index: 9999;
   box-shadow: 0px -2px 10px 0px rgba(38, 38, 38, 0.1);
 }
-.banner {
+.banner666 {
   position: fixed;
   top: 0;
   z-index: -1;
@@ -36,27 +36,27 @@ page::after {
   font-family: PingFang SC;
   color: #fff;
 }
-.top {
+.top666 {
   text-align: center;
   position: fixed;
   z-index: 99;
 }
-.nav {
+.nav666 {
   position: fixed;
   top: 160rpx;
   left: 30rpx;
 }
-.nav .input {
+.nav666 .input {
   position: relative;
 }
-.nav .input .search {
+.nav666 .input .search {
   position: absolute;
   left: 23rpx;
   top: 15rpx;
   height: 28rpx;
   width: 28rpx;
 }
-.nav .input .searchbtn {
+.nav666 .input .searchbtn {
   text-align: left;
   position: absolute;
   left: 0;
@@ -70,7 +70,7 @@ page::after {
   line-height: 58rpx;
   color: #a3a3a3;
 }
-.nav .servetime {
+.nav666 .servetime {
   padding-left: 20rpx;
   position: relative;
   left: 444rpx;
@@ -83,7 +83,7 @@ page::after {
   line-height: 58rpx;
   color: #a3a3a3;
 }
-.nav .servetime .rili {
+.nav666 .servetime .rili {
   position: absolute;
   left: 17rpx;
   top: 15rpx;
@@ -157,16 +157,16 @@ view.item view.right .gobtn {
   padding: unset;
 }
 view.item view.right .gobtn .van-button {
-  width: 160rpx;
-  height: 58rpx;
-  border-radius: 10px;
-  background-color: #3488f8;
+  width: 160rpx !important;
+  height: 58rpx !important;
+  border-radius: 10px !important;
+  background-color: #3488f8 !important;
 }
 view.item view.right .gobtn .van-button .van-button__text {
-  line-height: 58rpx;
-  font-size: 28rpx;
-  font-family: PingFang SC;
-  color: #ffffff;
+  line-height: 58rpx !important;
+  font-size: 28rpx !important;
+  font-family: PingFang SC !important;
+  color: #ffffff !important;
 }
 .getsucessbox {
   position: relative;
@@ -198,18 +198,18 @@ view.item view.right .gobtn .van-button .van-button__text {
   color: #459bfc;
 }
 .getsucessbox .getsucessconte .orderdetailBtn .van-button {
-  margin: 88rpx auto 20rpx;
-  width: 400rpx;
-  height: 80rpx;
-  background: #459bfc;
-  border-radius: 44rpx;
+  margin: 88rpx auto 20rpx !important;
+  width: 400rpx !important;
+  height: 80rpx !important;
+  background: #459bfc !important;
+  border-radius: 44rpx !important;
 }
 .getsucessbox .getsucessconte .orderdetailBtn .van-button .van-button__text {
-  line-height: 80rpx;
-  font-size: 32rpx;
-  font-family: Source Han Sans CN;
-  font-weight: 400;
-  color: #ffffff;
+  line-height: 80rpx !important;
+  font-size: 32rpx !important;
+  font-family: Source Han Sans CN !important;
+  font-weight: 400 !important;
+  color: #ffffff !important;
 }
 .getsucessbox .getsucessconte .back {
   font-size: 26rpx;
