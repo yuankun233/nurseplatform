@@ -4,26 +4,28 @@
   订单
 </view>
 <!-- tab栏 -->
-<van-tabs swipeable active="{{activeTab}}">
+<van-tabs
+  swipeable
+  active="{{activeTab}}"
+  bind:click="changeOrderList"
+>
   <van-tab title="待服务">
     <!--components/orderlist/orderlist.wxml-->
     <view
       class="item"
-      wx:for="{{tabs}}"
       catch:tap="goOrderDetail"
+      wx:for="{{orderList}}"
+      wx:key="item.id"
     >
       <view class="row-a1">
-        <view class="name">{{item.name}}</view>
+        <view class="name">{{item.archivesName}}</view>
         <view class="status">
           待服务
         </view>
       </view>
       <view class="row-a2">
         <view class="serve">
-          {{item.type}}</view>
-        <view class="hcb">
-          {{item.hcb==true?'需要耗材包':'不需要耗材包'}}
-        </view>
+          {{item.body}}</view>
       </view>
       <view class="row-a3">
         <view class="text">
@@ -43,9 +45,9 @@
             decode="false"
             style="margin-right:10rpx"
           >
-            {{item.servedate}}
+            {{item.startTime}}
           </view>
-          {{item.servetime}}
+          {{item.timeSlot}}
         </view>
         <view class="text">
           <image
@@ -57,7 +59,7 @@
             bindload=""
           />
           情况描述：
-          {{item.msg}}
+          {{item.chontentText}}
 
         </view>
         <view class="text">

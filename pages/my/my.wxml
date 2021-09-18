@@ -15,7 +15,7 @@
   <view class="headpic">
     <image
       mode="widthFix"
-      src="{{isLogin?user.img:'../../assets/unlogin.png'}}"
+      src="{{isLogin?user.attendPisurl:'../../assets/unlogin.png'}}"
       style="border-radius:50%"
       lazy-load="{{true}}"
       bind:tap="toLogin"
@@ -23,7 +23,7 @@
   </view>
 
   <view class="profile">
-    <view class="name" bind:tap="toLogin">{{isLogin?user.nickname:'登录/注册'}}</view>
+    <view class="name" bind:tap="toLogin">{{isLogin?user.attendName:'登录/注册'}}</view>
     <!-- <view class="id">
       ID:95279527
     </view> -->

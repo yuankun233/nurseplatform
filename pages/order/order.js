@@ -1,3 +1,5 @@
+import { $myRequest } from "../../utils/request" // 引入ajax工具
+import { getUser } from "../../utils/getUser" // 引入验证获取user工具
 Page({
   onShareAppMessage() {
     return {
@@ -6,77 +8,87 @@ Page({
     }
   },
   data: {
-    activeTab: 0, // 用下标控制激活的tab
-    btnStatus: 0,
-    tabs: [
-      {
-        title: "待服务",
-        status: false,
-        name: "张先生",
-        type: "静脉采血(单次)",
-        hcb: true,
-        servedate: "6-11",
-        servetime: "13:00-16:00",
-        msg: "需要带压脉带以及酒精棉",
-        adress: "上海市闵行区",
-        money: 150
-      },
-      {
-        title: "服务中",
-        status: true,
-        name: "李先生",
-        type: "陪伴护理",
-        hcb: false,
-        servedate: "6-12",
-        servetime: "15:00-16:00",
-        msg: "需要护士跟随",
-        adress: "上海市松江区",
-        money: 250
-      },
-      {
-        title: "已服务",
-        status: false,
-        name: "董女士",
-        type: "上门服务",
-        hcb: false,
-        servedate: "6-15",
-        servetime: "10:00-16:00",
-        msg: "需要带压脉带",
-        adress: "上海市浦东新区",
-        money: 450
-      }
-    ]
+    activeTab: 0, // 用下标控制激活的tab 0:待服务，1:服务中，2：已服务
+    orderList: [],
+    currentPage: 1,
+    orderStatus: "待服务", //用来请求不同状态列表
+    attendId: "", //护士id
+    btnStatus: 0
   },
 
-  onLoad() {},
-
-  onTabClick(e) {
-    const index = e.detail.index
+  onLoad() {
+    // 获取本地缓存
+    const user = wx.getStorageSync("user")
+    console.log(user)
     this.setData({
-      activeTab: index
+      attendId: user.attendId
+    })
+    // 获取订单列表
+    this.getOrderList()
+  },
+  //当切换订单状态时，订单列表重新获取
+  changeOrderList(e) {
+    console.log("orderlist变化")
+    const index = e.detail.index
+    let orderStatus
+    // 当下标为0，订单状态设为相应的状态
+    if (index == 0) {
+      orderStatus = "待服务"
+    }
+    if (index == 1) {
+      orderStatus = "服务中"
+    }
+    if (index == 2) {
+      orderStatus = "待评价"
+    }
+    this.setData({
+      activeTab: index,
+      orderStatus
     })
   },
 
-  onChange(e) {
-    const index = e.detail.index
-    this.setData({
-      activeTab: index
-    })
-  },
-  handleClick(e) {
-    wx.navigateTo({
-      url: "./webview"
-    })
-  },
-  // 联系客户
-  calluser() {
-    console.log("联系客户中~~")
-  },
   // 跳转到订单详情页面
   goOrderDetail() {
     wx.navigateTo({
       url: "/pages/orderdetail/orderdetail"
     })
+  },
+
+  // 请求订单列表
+  async getOrderList() {
+    // 1. 向服务器请求订单
+    const data = {
+      attendId: this.data.attendId,
+      orderStatus: this.data.orderStatus,
+      currentPage: this.data.currentPage
+    }
+    console.log(data)
+    const res = await $myRequest({
+      url: "/xhll/order/selectOrder",
+      method: "POST",
+      data
+    })
+    console.log("请求订单列表：", res)
+    let list = this.data.orderList // 获取当前订单列表
+    list.push(...res.data.selectOrder.data) // 追加请求的订单数据
+    // 更新data
+    this.setData({
+      orderList: list
+    })
+  },
+  // 列表触底获取下一页
+  onReachBottom() {
+    console.log("页面触底了!!")
+    //页码+1
+    this.setData({
+      currentPage: this.data.currentPage + 1
+    })
+    // 获取下一页订单
+    this.getOrderList()
+  },
+  //开启下拉刷新
+  onPullDownRefresh: function () {
+    this.getOrderList()
   },
   // 出发
   go(e) {
@@ -111,5 +123,9 @@ Page({
       fail: () => {},
       complete: () => {}
     })
+  },
+  // 联系客户
+  calluser() {
+    console.log("联系客户中~~")
   }
 })

@@ -34,7 +34,7 @@ Page({
     }
     // 通过手机校验，发送手机验证码
     const res = await $myRequest({
-      url: "/bee/open-72810619931328627/auth/getPhoneNumberwyyx",
+      url: "/xhll/auth/getPhoneNumberwyyx",
       data: {
         phone: this.data.phone,
         sms_type: "1"
@@ -129,7 +129,7 @@ Page({
       })
       // 1. 向服务器发送登录请求
       const res = await $myRequest({
-        url: "/bee/open-72810619931328627/auth/getSessionByCode",
+        url: "/xhll/auth/getSessionByCode",
         data: {
           code
         }
@@ -172,7 +172,7 @@ Page({
         console.log(data)
         const res = await $myRequest({
           method: "POST",
-          url: "/bee/open-72810619931328627/auth/inPhoneRegister",
+          url: "/xhll/auth/inPhoneRegister",
           data
         })
         console.log("接口3注册：", res)

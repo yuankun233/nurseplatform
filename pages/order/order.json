@@ -3,5 +3,6 @@
     "order-message":"../../components/ordermessage/ordermessage",
     "order-list":"../../components/orderlist/orderlist"
   },
-  "navigationStyle": "custom"
+  "navigationStyle": "custom",
+  "onReachBottomDistance": 50
 }

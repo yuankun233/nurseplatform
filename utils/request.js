@@ -5,7 +5,7 @@ export const $myRequest = (params) => {
     title: "加载中..."
   })
   // 定义公共的url
-  const baaseUrl = "https://www.qycloud.com.cn"
+  const baaseUrl = "https://www.qycloud.com.cn/bee/open-75661043697254584"
   return new Promise((resolve, reject) => {
     wx.request({
       ...params,

@@ -43,7 +43,7 @@ Page({
       })
       // 1. 向服务器发送登录请求
       const res = await $myRequest({
-        url: "/bee/open-72810619931328627/auth/getSessionByCode",
+        url: "/xhll/auth/getSessionByCode",
         data: {
           code
         }
@@ -107,7 +107,7 @@ Page({
     try {
       const res = await $myRequest({
         method: "POST",
-        url: "/bee/open-72810619931328627/auth/getUserTelephoneVerify",
+        url: "/xhll/auth/getUserTelephoneVerify",
         data
       })
       console.log("接口2:", res)
