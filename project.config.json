@@ -39,7 +39,7 @@
     "showES6CompileOption": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.19.4",
+  "libVersion": "2.16.1",
   "appid": "wx215bd044305d4fa9",
   "projectname": "nurseplatform",
   "debugOptions": {

@@ -114,7 +114,11 @@
           >
             出发
           </van-button> -->
-            <van-button class="go" catch:tap="arrive">
+            <van-button
+              class="go"
+              catch:tap="arrive"
+              data-orderid="{{item.orderID}}"
+            >
               到达
             </van-button>
 

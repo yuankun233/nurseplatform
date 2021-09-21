@@ -122,7 +122,29 @@ Page({
     })
   },
   // 到达，将订单状态变为服务中
-  arrive() {},
+  async arrive(e) {
+    wx.showModal({
+      title: "提示",
+      content: "是否接单",
+      async success(res) {
+        if (res.confirm) {
+          console.log("用户点击确定")
+          let orderID = e.currentTarget.dataset.orderid
+          console.log("订单ID：", orderID)
+          const res = await $myRequest({
+            url: "/xhll/order/inServiceOrder",
+            method: "POST",
+            data: {
+              orderID
+            }
+          })
+          console.log(res)
+        } else if (res.cancel) {
+          console.log("用户点击取消")
+        }
+      }
+    })
+  },
   // 联系客户
   calluser(e) {
     console.log("联系客户中~~")
