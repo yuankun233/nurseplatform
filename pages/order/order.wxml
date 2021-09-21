@@ -11,126 +11,172 @@
 >
   <van-tab title="待服务">
     <!--components/orderlist/orderlist.wxml-->
-    <view
-      class="item"
-      catch:tap="goOrderDetail"
-      wx:for="{{orderList}}"
-      wx:key="item.id"
-    >
-      <view class="row-a1">
-        <view class="name">{{item.archivesName}}</view>
-        <view class="status">
-          待服务
-        </view>
-      </view>
-      <view class="row-a2">
-        <view class="serve">
-          {{item.body}}</view>
-      </view>
-      <view class="row-a3">
-        <view class="text">
-          <image
-            class="time icon"
-            src="../../assets/time.png"
-            mode="aspectFit|aspectFill|widthFix"
-            lazy-load="false"
-            binderror=""
-            bindload=""
-          />
-          服务时间：
-          <view
-            class=""
-            selectable="false"
-            space="false"
-            decode="false"
-            style="margin-right:10rpx"
-          >
-            {{item.startTime}}
+
+    <view wx:if="{{orderList!=''}}">
+      <view
+        class="item"
+        catch:tap="goOrderDetail"
+        wx:for="{{orderList}}"
+        wx:key="id"
+      >
+        <view class="row-a1">
+          <view class="name">{{item.archivesName}}</view>
+          <view class="status">
+            待服务
           </view>
-          {{item.timeSlot}}
         </view>
-        <view class="text">
-          <image
-            class="msg icon"
-            src="../../assets/msg.png"
-            mode="aspectFit|aspectFill|widthFix"
-            lazy-load="false"
-            binderror=""
-            bindload=""
-          />
-          情况描述：
-          {{item.chontentText}}
+        <view class="row-a2">
+          <view class="serve">
+            {{item.body}}</view>
+        </view>
+        <view class="row-a3">
+          <view class="text">
+            <image
+              class="time icon"
+              src="../../assets/time.png"
+              mode="aspectFit|aspectFill|widthFix"
+              lazy-load="false"
+              binderror=""
+              bindload=""
+            />
+            服务时间：
+            <view
+              class=""
+              selectable="false"
+              space="false"
+              decode="false"
+              style="margin-right:10rpx"
+            >
+              {{item.startTime}}
+            </view>
+            {{item.timeSlot}}
+          </view>
+          <view class="text">
+            <image
+              class="msg icon"
+              src="../../assets/msg.png"
+              mode="aspectFit|aspectFill|widthFix"
+              lazy-load="false"
+              binderror=""
+              bindload=""
+            />
+            情况描述：
+            {{item.chontentText}}
+
+          </view>
+          <view class="text">
+            <image
+              class="address icon"
+              src="../../assets/address.png"
+              style="width:23rpx;height:29rpx"
+              mode="aspectFit|aspectFill|widthFix"
+              lazy-load="false"
+              binderror=""
+              bindload=""
+            />
+            地址：{{item.adress}}
+          </view>
+          <view class="text">
+            <image
+              class="money icon"
+              src="../../assets/money.png"
+              mode="aspectFit|aspectFill|widthFix"
+              lazy-load="false"
+              binderror=""
+              bindload=""
+            />
+            此单可赚
+            <view
+              class="light"
+              selectable="false"
+              space="false"
+              decode="false"
+            >
+              150
+            </view>
+            元
+          </view>
 
         </view>
-        <view class="text">
-          <image
-            class="address icon"
-            src="../../assets/address.png"
-            style="width:23rpx;height:29rpx"
-            mode="aspectFit|aspectFill|widthFix"
-            lazy-load="false"
-            binderror=""
-            bindload=""
-          />
-          地址：{{item.adress}}
-        </view>
-        <view class="text">
-          <image
-            class="money icon"
-            src="../../assets/money.png"
-            mode="aspectFit|aspectFill|widthFix"
-            lazy-load="false"
-            binderror=""
-            bindload=""
-          />
-          此单可赚
-          <view
-            class="light"
-            selectable="false"
-            space="false"
-            decode="false"
-          >
-            150
-          </view>
-          元
-        </view>
-
-      </view>
-      <view class="btns">
-        <view class="flexbox">
-          <van-button class="calluser" catch:tap="calluser">
-            联系客户
-          </van-button>
-          <van-button
+        <view class="btns">
+          <view class="flexbox">
+            <van-button
+              class="calluser"
+              catch:tap="calluser"
+              data-telnum="{{item.archivesPhone}}"
+            >
+              联系客户
+            </van-button>
+            <!-- <van-button
             class="go"
             catch:tap="go"
             wx:if="{{btnStatus===0}}"
           >
             出发
-          </van-button>
-          <van-button
-            class="go"
-            catch:tap="arrive"
-            wx:if="{{btnStatus===1}}"
-          >
-            到达
-          </van-button>
+          </van-button> -->
+            <van-button class="go" catch:tap="arrive">
+              到达
+            </van-button>
+
+          </view>
 
         </view>
 
       </view>
 
     </view>
-
+    <!-- 列表暂无内容时的提示内容 -->
+    <view class="NList" hidden="{{orderList!=''}}">
+      <image
+        class="nolist"
+        src="../../assets/nolist.png"
+        mode="aspectFit|aspectFill|widthFix"
+        lazy-load="true"
+      />
+      <view class="nolisttext">
+        暂无内容
+      </view>
+    </view>
   </van-tab>
   <!-- 服务中 -->
   <van-tab title="服务中">
-    <order-message class="order-message">
+
+    <order-message
+      class="order-message"
+      wx:if="{{orderList!=''}}"
+      orderList="{{orderList}}"
+    >
       <van-button type="default" class="recordBtn">打开录音</van-button>
     </order-message>
+    <!-- 列表暂无内容时的提示内容 -->
+    <view class="NList" hidden="{{orderList!=''}}">
+      <image
+        class="nolist"
+        src="../../assets/nolist.png"
+        mode="aspectFit|aspectFill|widthFix"
+        lazy-load="true"
+      />
+      <view class="nolisttext">
+        暂无内容
+      </view>
+    </view>
+
   </van-tab>
-  <van-tab title="已服务">
-    <order-list></order-list>
+  <van-tab title="已完成">
+    <order-list wx:if="{{orderList!=''}}" orderList="{{orderList}}"></order-list>
+
+    <!-- 列表暂无内容时的提示内容 -->
+    <view class="NList" hidden="{{orderList!=''}}">
+      <image
+        class="nolist"
+        src="../../assets/nolist.png"
+        mode="aspectFit|aspectFill|widthFix"
+        lazy-load="true"
+      />
+      <view class="nolisttext">
+        暂无内容
+      </view>
+    </view>
   </van-tab>
 
 </van-tabs>

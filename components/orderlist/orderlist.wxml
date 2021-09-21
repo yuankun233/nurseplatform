@@ -2,19 +2,18 @@
 <!-- 已服务列表 -->
 <view
   class="item"
-  wx:for="{{tabs}}"
-  wx:key="item"
-  catch:tap="goOrderDetail"
+  wx:for="{{orderList}}"
+  wx:key="id"
 >
   <view class="row-a1">
-    <view class="name">{{item.name}}</view>
+    <view class="name">{{item.archivesName}}</view>
     <!-- <view class="status">
       待服务
     </view> -->
   </view>
   <view class="row-a2">
     <view class="serve">
-      {{item.type}}</view>
+      {{item.body}}</view>
 
   </view>
   <view class="row-a3">
@@ -33,9 +32,9 @@
         decode="false"
         style="margin-right:10rpx"
       >
-        {{item.servedate}}
+        {{item.startTime}}
       </view>
-      {{item.servetime}}
+      {{item.timeSlot}}
     </view>
     <view class="text">
       <image
@@ -45,7 +44,7 @@
         lazy-load="false"
       />
       情况描述：
-      {{item.msg}}
+      {{item.chontentText}}
 
     </view>
     <view class="text">

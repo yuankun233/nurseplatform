@@ -9,11 +9,11 @@ Page({
   },
   data: {
     activeTab: 0, // 用下标控制激活的tab 0:待服务，1:服务中，2：已服务
-    orderList: [],
+    orderList: "",
     currentPage: 1,
     orderStatus: "待服务", //用来请求不同状态列表
     attendId: "", //护士id
-    btnStatus: 0
+    btnStatus: 1
   },
 
   onLoad() {
@@ -29,9 +29,13 @@ Page({
   //当切换订单状态时，订单列表重新获取
   changeOrderList(e) {
     console.log("orderlist变化")
+    // 1 清除页面上个状态的订单数据
+    this.setData({
+      orderList: []
+    })
     const index = e.detail.index
     let orderStatus
-    // 当下标为0，订单状态设为相应的状态
+    // 2 当下标为0，订单状态设为相应的状态
     if (index == 0) {
       orderStatus = "待服务"
     }
@@ -39,12 +43,15 @@ Page({
       orderStatus = "服务中"
     }
     if (index == 2) {
-      orderStatus = "待评价"
+      orderStatus = "已完成"
     }
+    // 3 设置页面对应的data状态
     this.setData({
       activeTab: index,
       orderStatus
     })
+    // 4 获取新的orderList数据
+    this.getOrderList()
   },
 
   // 跳转到订单详情页面
@@ -69,11 +76,20 @@ Page({
       data
     })
     console.log("请求订单列表：", res)
-    let list = this.data.orderList // 获取当前订单列表
-    list.push(...res.data.selectOrder.data) // 追加请求的订单数据
+    // 如果请求的页码大于1，则用展开运算符追加订单列表
+    if (this.data.currentPage > 1) {
+      let list = this.data.orderList // 获取当前订单列表
+      list.push(...res.data.selectOrder.data) // 追加请求的订单数据
+      // 更新data
+      this.setData({
+        orderList: list
+      })
+      return
+    }
+
     // 更新data
     this.setData({
-      orderList: list
+      orderList: res.data.selectOrder.data
     })
   },
   // 列表触底获取下一页
@@ -88,7 +104,14 @@ Page({
   },
   //开启下拉刷新
   onPullDownRefresh: function () {
+    //清除原有列表数据
+    this.setData({
+      orderList: []
+    })
+    //刷新列表
     this.getOrderList()
+    //取消页面的下拉刷新状态
+    wx.stopPullDownRefresh()
   },
   // 出发
   go(e) {
@@ -98,34 +121,18 @@ Page({
       btnStatus: 1
     })
   },
-  // 到达
-  arrive() {
-    wx.showModal({
-      title: "是否确认到达",
-      content: "确认到达后将开始服务",
-      showCancel: true,
-      cancelText: "取消",
-      cancelColor: "#000000",
-      confirmText: "确定",
-      confirmColor: "#3CC51F",
-      success: (result) => {
-        if (result.confirm) {
-          console.log("确认到达")
-          // 切换到服务中
-          this.setData({
-            activeTab: 1
-          })
-          return
-        }
-
-        console.log("取消确认")
-      },
+  // 到达，将订单状态变为服务中
+  arrive() {},
+  // 联系客户
+  calluser(e) {
+    console.log("联系客户中~~")
+    let telNum = e.currentTarget.dataset.telnum
+    console.log(telNum)
+    wx.makePhoneCall({
+      phoneNumber: telNum,
+      success: (result) => {},
       fail: () => {},
       complete: () => {}
     })
-  },
-  // 联系客户
-  calluser() {
-    console.log("联系客户中~~")
   }
 })

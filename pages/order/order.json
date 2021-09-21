@@ -4,5 +4,7 @@
     "order-list":"../../components/orderlist/orderlist"
   },
   "navigationStyle": "custom",
-  "onReachBottomDistance": 50
+  "onReachBottomDistance": 50,
+  "enablePullDownRefresh":false,
+  "backgroundTextStyle":"dark"
 }

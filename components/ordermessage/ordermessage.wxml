@@ -2,42 +2,42 @@
 <!-- 订单内容 -->
 <view class="order">
   <view class="name">
-    张先生
+    {{orderList[0].archivesName}}
   </view>
   <view class="personmsg">
-    <view class="sex">男
-      <view class="age">35岁</view>
+    <view class="sex">
+      <view class="age"></view>
     </view>
 
     <view class="price">
       <view class="light">
         ￥
       </view>
-      150
+      {{orderList[0].orderFee}}
     </view>
   </view>
   <view class="ordernum">
-    订单号：6615616654
+    订单号：{{orderList[0].outTradeNo}}
   </view>
   <view class="type">
-    服务项目：静脉采血（单次）需要耗材包
+    服务项目：{{orderList[0].serviceName}}
   </view>
   <view class="starttime">
     下单时间:
     <view class="date">
-      6-11
+      {{orderList[0].createTime}}
     </view>
-    13:00-16:00
+    {{orderList[0].createTime}}
   </view>
   <view class="servetime">
     服务时间:
     <view class="date">
-      6-11
+      {{orderList[0].startTime}}
     </view>
-    13:00-1 6:00
+    {{orderList[0].timeSlot}}
   </view>
   <view class="address">
-    服务地址：上海市闵行区漕宝路333号
+    服务地址：{{}}
   </view>
   <view class="input">
     <view class="dsc">
@@ -45,29 +45,13 @@
     </view>
     <textarea
       placeholder="客户详细病症，服务内容"
-      name=""
-      id=""
       cols="30"
       rows="10"
-    >
+      value="{{orderList[0].chontentText}}"
+      disabled
+    />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </textarea>
-
-  </view>
+    </view>
   <slot></slot>
 </view>
 
