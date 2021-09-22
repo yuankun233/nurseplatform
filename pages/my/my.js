@@ -5,7 +5,7 @@ Page({
    */
   data: {
     user: null, //用户信息
-    isLogin:false//用户登录状态
+    isLogin: false //用户登录状态
   },
 
   /**
@@ -41,18 +41,19 @@ Page({
         // 储存用户信息，并把登录状态该为true
         this.setData({
           user,
-          isLogin:true
+          isLogin: true
         })
-        
       }
     } catch (e) {
       // Do something when catch error
     }
   },
   // 跳转登录界面
-  toLogin(){
-    wx.navigateTo({
-      url:"/pages/login/login"
-    })
+  toLogin() {
+    if (this.data.isLogin == false) {
+      wx.navigateTo({
+        url: "/pages/login/login"
+      })
+    }
   }
 })

@@ -210,3 +210,6 @@ view.cash view.row-a3 {
   margin-top: 25rpx;
   margin-bottom: 16rpx;
 }
+.hidden1 {
+  opacity: 0;
+}

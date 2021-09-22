@@ -16,6 +16,7 @@
       <view
         class="item"
         catch:tap="goOrderDetail"
+        data-orderid="{{item.orderID}}"
         wx:for="{{orderList}}"
         wx:key="id"
       >
@@ -92,7 +93,7 @@
               space="false"
               decode="false"
             >
-              150
+              {{item.orderFee}}
             </view>
             元
           </view>
@@ -117,7 +118,7 @@
             <van-button
               class="go"
               catch:tap="arrive"
-              data-orderid="{{item.orderID}}"
+              data-id="{{item.id}}"
             >
               到达
             </van-button>
@@ -150,7 +151,14 @@
       wx:if="{{orderList!=''}}"
       orderList="{{orderList}}"
     >
-      <van-button type="default" class="recordBtn">打开录音</van-button>
+      <!-- <van-button type="default" class="recordBtn">打开录音</van-button> -->
+      <van-button
+        type="default"
+        class="recordBtn"
+        bind:tap="overServe"
+        data-id="{{orderList[0].id}}"
+      >完成服务
+      </van-button>
     </order-message>
     <!-- 列表暂无内容时的提示内容 -->
     <view class="NList" hidden="{{orderList!=''}}">

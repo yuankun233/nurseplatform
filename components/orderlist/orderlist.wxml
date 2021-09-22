@@ -36,16 +36,16 @@
       </view>
       {{item.timeSlot}}
     </view>
+
     <view class="text">
       <image
-        class="msg icon"
-        src="../../assets/msg.png"
+        class="time icon"
+        src="../../assets/time.png"
         mode="aspectFit|aspectFill|widthFix"
         lazy-load="false"
       />
-      情况描述：
-      {{item.chontentText}}
-
+      下单时间：
+      {{item.createTime}}
     </view>
     <view class="text">
       <image

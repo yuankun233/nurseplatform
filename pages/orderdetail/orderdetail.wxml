@@ -10,7 +10,7 @@
   订单详情
 </view>
 <!-- 订单详情 -->
-<order-message>
+<order-message orderList="{{orderDetail}}">
 
 </order-message>
 

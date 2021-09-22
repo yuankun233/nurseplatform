@@ -28,13 +28,13 @@
       ID:95279527
     </view> -->
   </view>
-  <view class="verifyed">
+  <view class="verifyed" wx:if="{{isLogin}}">
     已认证
   </view>
 
 </view>
 <!-- 护士认证信息 -->
-<view class="verify">
+<view class="verify" class="{{isLogin==false?'hidden1 verify':'verify'}}">
   <image
     class="verifybanner"
     src="../../assets/verifybanner1.png"
@@ -49,7 +49,7 @@
       src="../../assets/duihao.png"
       mode="widthFix"
     />
-    王小蒙-高级护士
+    {{user.attendName}}-高级护士
   </view>
 </view>
 <!-- 提现信息 -->

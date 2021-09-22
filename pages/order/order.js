@@ -55,9 +55,10 @@ Page({
   },
 
   // 跳转到订单详情页面
-  goOrderDetail() {
+  goOrderDetail(e) {
+    const orderid = e.currentTarget.dataset.orderid
     wx.navigateTo({
-      url: "/pages/orderdetail/orderdetail"
+      url: "/pages/orderdetail/orderdetail?orderid=" + orderid
     })
   },
 
@@ -123,22 +124,96 @@ Page({
   },
   // 到达，将订单状态变为服务中
   async arrive(e) {
+    let that = this
     wx.showModal({
       title: "提示",
-      content: "是否接单",
+      content: "确认后将开始服务",
       async success(res) {
         if (res.confirm) {
           console.log("用户点击确定")
-          let orderID = e.currentTarget.dataset.orderid
-          console.log("订单ID：", orderID)
+          let id = e.currentTarget.dataset.id
+          console.log("订单id：", id)
+          // 1 更改服务状态
           const res = await $myRequest({
             url: "/xhll/order/inServiceOrder",
             method: "POST",
             data: {
-              orderID
+              id
             }
           })
           console.log(res)
+          // 2 修改成功，刷新页面
+          if (res.success) {
+            that.setData({
+              activeTab: 1,
+              orderStatus: "服务中"
+            })
+            // 重新获取数据
+            that.getOrderList()
+            return
+          }
+          // 3 修改失败
+          if (res.success == false) {
+            wx.showToast({
+              title: "请求失败，请稍后再试",
+              icon: "none",
+              duration: 1500,
+              success: (result) => {},
+              fail: () => {},
+              complete: () => {}
+            })
+            return
+          }
+        } else if (res.cancel) {
+          console.log("用户点击取消")
+        }
+      }
+    })
+  },
+  // 完成服务
+  overServe(e) {
+    let that = this
+    wx.showModal({
+      title: "提示",
+      content: "确认后将完成服务",
+      async success(res) {
+        if (res.confirm) {
+          console.log("用户点击确定")
+          let id = e.currentTarget.dataset.id
+
+          console.log("订单id：", id)
+          // 1 更改服务状态
+          const res = await $myRequest({
+            url: "/xhll/order/completeOrder",
+            method: "POST",
+            data: {
+              id
+            }
+          })
+          console.log(res)
+
+          // 2 修改成功，刷新页面
+          if (res.success) {
+            that.setData({
+              activeTab: 2,
+              orderStatus: "已完成"
+            })
+            // 重新获取数据
+            that.getOrderList()
+            return
+          }
+          // 3 修改失败
+          if (res.success == false) {
+            wx.showToast({
+              title: "请求失败，请稍后再试",
+              icon: "none",
+              duration: 1500,
+              success: (result) => {},
+              fail: () => {},
+              complete: () => {}
+            })
+            return
+          }
         } else if (res.cancel) {
           console.log("用户点击取消")
         }
@@ -151,10 +226,7 @@ Page({
     let telNum = e.currentTarget.dataset.telnum
     console.log(telNum)
     wx.makePhoneCall({
-      phoneNumber: telNum,
-      success: (result) => {},
-      fail: () => {},
-      complete: () => {}
+      phoneNumber: telNum
     })
   }
 })
