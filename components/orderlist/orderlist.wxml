@@ -56,7 +56,7 @@
         lazy-load="false"
         binderror=""
       />
-      地址：{{item.adress}}
+      地址：{{item.archivesRegion}}
     </view>
 
   </view>

@@ -16,7 +16,7 @@
       <view
         class="item"
         catch:tap="goOrderDetail"
-        data-orderid="{{item.orderID}}"
+        data-orderid="{{item.orderId}}"
         wx:for="{{orderList}}"
         wx:key="id"
       >
@@ -75,7 +75,7 @@
               binderror=""
               bindload=""
             />
-            地址：{{item.adress}}
+            地址：{{item.archivesRegion}} {{item.archivesAddress}}
           </view>
           <view class="text">
             <image

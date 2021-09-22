@@ -37,7 +37,7 @@
     {{orderList[0].timeSlot}}
   </view>
   <view class="address">
-    服务地址：{{}}
+    服务地址：{{orderList[0].archivesRegion}}
   </view>
   <view class="input">
     <view class="dsc">
