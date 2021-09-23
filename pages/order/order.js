@@ -13,18 +13,28 @@ Page({
     currentPage: 1,
     orderStatus: "待服务", //用来请求不同状态列表
     attendId: "", //护士id
-    btnStatus: 1
+    btnStatus: 1,
+    isLogin: false
   },
 
   onLoad() {
-    // 获取本地缓存
-    const user = wx.getStorageSync("user")
-    console.log(user)
-    this.setData({
-      attendId: user.attendId
-    })
-    // 获取订单列表
-    this.getOrderList()
+    try {
+      // 获取本地缓存
+      const user = wx.getStorageSync("user")
+      // 如果获取成功，则已登录,请求订单数据
+      if (user) {
+        console.log(user)
+        this.setData({
+          attendId: user.attendId,
+          isLogin: true
+        })
+        // 获取订单列表
+        this.getOrderList()
+        return
+      }
+    } catch (e) {
+      // Do something when catch error
+    }
   },
   //当切换订单状态时，订单列表重新获取
   changeOrderList(e) {

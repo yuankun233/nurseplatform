@@ -139,7 +139,7 @@
         lazy-load="true"
       />
       <view class="nolisttext">
-        暂无内容
+        无订单信息或未登录
       </view>
     </view>
   </van-tab>
@@ -169,7 +169,7 @@
         lazy-load="true"
       />
       <view class="nolisttext">
-        暂无内容
+        无订单信息或未登录
       </view>
     </view>
 
@@ -186,7 +186,7 @@
         lazy-load="true"
       />
       <view class="nolisttext">
-        暂无内容
+        无订单信息或未登录
       </view>
     </view>
   </van-tab>

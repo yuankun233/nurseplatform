@@ -54,14 +54,18 @@
 </view>
 <!--  服务列表 -->
 <view style="padding" class="list">
-  <view class="item" wx:for="{{9}}">
+  <view
+    class="item"
+    wx:for="{{list}}"
+    wx:key="id"
+  >
     <view class="left">
       <view class="name">
-        张先生
+        {{item.archivesName}}
       </view>
       <view class="detail">
-        静脉采血(单次)
-        <text class="hcb">需要耗材包</text>
+        {{item.serviceName}}
+        <!-- <text class="hcb">需要耗材包</text> -->
       </view>
       <view class="text0" style="margin-bottom:16rpx">
         <image
@@ -73,8 +77,8 @@
           bindload=""
         />
         服务时间：
-        <text class="text1">6-11</text>
-        13:00-16:00
+        <text class="text1"> {{item.startTime}}</text>
+        {{item.timeSlot}}
       </view>
       <view class="text0" style="margin-bottom:16rpx">
         <image
@@ -86,7 +90,7 @@
           bindload=""
         />
         情况描述：
-        <text class="text1">需要带压脉带以及酒精棉</text>
+        <text class="text1">{{item.chontentText}}</text>
 
       </view>
       <view class="text0">
@@ -100,7 +104,7 @@
           bindload=""
         />
         地址：
-        <text class="text1">上海闵行区</text>
+        <text class="text1">{{item.archivesRegion}}{{item.archivesAddress}}</text>
 
       </view>
 
@@ -108,7 +112,7 @@
     <view class="right">
       <view class="price">
         <text class="light">￥</text>
-        150
+        {{item.orderFee}}
       </view>
       <van-button
         class="gobtn"
