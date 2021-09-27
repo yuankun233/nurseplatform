@@ -116,8 +116,9 @@
       </view>
       <van-button
         class="gobtn"
-        bindtap="showModal"
-        data-target="Image"
+        bindtap="robOrder"
+        data-id="{{item.id}}"
+        data-orderid="{{item.orderId}}"
       >
         立即抢单
       </van-button>
@@ -125,10 +126,22 @@
 
   </view>
 
+  <!-- 列表暂无内容时的提示内容 -->
+  <view class="NList" hidden="{{list!=''}}">
+    <image
+      class="nolist"
+      src="../../assets/nolist.png"
+      mode="aspectFit|aspectFill|widthFix"
+      lazy-load="true"
+    />
+    <view class="nolisttext">
+      暂时没有待服务订单
+    </view>
+  </view>
 </view>
 <!-- 抢单成功遮罩层 -->
 
-<view class="cu-modal {{modalName=='Image'?'show':''}}">
+<view class="cu-modal {{show==true?'show':''}}">
   <view class="cu-dialog getsucessbox">
     <image
       class="sucesspic"

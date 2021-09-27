@@ -217,3 +217,17 @@ view.item view.right .gobtn .van-button .van-button__text {
   font-weight: 400;
   color: #858585;
 }
+.NList {
+  margin-top: 250rpx;
+  text-align: center;
+}
+.NList image {
+  width: 397rpx;
+  height: 278rpx;
+}
+.NList view {
+  margin-top: 10rpx;
+  color: #000;
+  font-size: 36rpx;
+  text-align: center;
+}
